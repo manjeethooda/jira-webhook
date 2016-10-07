@@ -1,5 +1,9 @@
 [0m[[0minfo[0m] [0mPackaging /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/apiserver_2.11-0.1.0-SNAPSHOT.jar ...[0m
 [0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	Routes$$anonfun$routes$1$$anonfun$applyOrElse$13.class[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$13.class[0m
+[0m[[0mdebug[0m] [0m	Routes$$anonfun$routes$1$$anonfun$applyOrElse$13$$anonfun$apply$13.class[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$13$$anonfun$apply$13.class[0m
 [0m[[0mdebug[0m] [0m	Routes$$anonfun$Routes$$controllers_Application_index0_invoker$1.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$Routes$$controllers_Application_index0_invoker$1.class[0m
 [0m[[0mdebug[0m] [0m	Routes$$anonfun$Routes$$controllers_Users_getUsers5_invoker$1.class[0m
@@ -16,14 +20,20 @@
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/controllers/ref/ReverseExpenses$$anonfun$postExpenses$1.class[0m
 [0m[[0mdebug[0m] [0m	models/restapi/HTTPStatus.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/restapi/HTTPStatus.class[0m
+[0m[[0mdebug[0m] [0m	Routes$$anonfun$Routes$$controllers_KosyncProject_putProject13_invoker$1.class[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$Routes$$controllers_KosyncProject_putProject13_invoker$1.class[0m
 [0m[[0mdebug[0m] [0m	Routes$$anonfun$routes$1$$anonfun$applyOrElse$3$$anonfun$apply$3.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$3$$anonfun$apply$3.class[0m
 [0m[[0mdebug[0m] [0m	Routes$$anonfun$routes$1$$anonfun$applyOrElse$9.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$9.class[0m
+[0m[[0mdebug[0m] [0m	controllers/ref/ReverseKosyncProject.class[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/controllers/ref/ReverseKosyncProject.class[0m
 [0m[[0mdebug[0m] [0m	models/restapi/HTTPStatusCode.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/restapi/HTTPStatusCode.class[0m
 [0m[[0mdebug[0m] [0m	models/restapi/APIForm.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/restapi/APIForm.class[0m
+[0m[[0mdebug[0m] [0m	controllers/ReverseKosyncProject.class[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/controllers/ReverseKosyncProject.class[0m
 [0m[[0mdebug[0m] [0m	controllers/ref/ReverseKosyncIssue$$anonfun$getIssueById$1.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/controllers/ref/ReverseKosyncIssue$$anonfun$getIssueById$1.class[0m
 [0m[[0mdebug[0m] [0m	Routes$$anonfun$routes$1$$anonfun$applyOrElse$12$$anonfun$apply$12.class[0m
@@ -80,6 +90,8 @@
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/application-logger.xml[0m
 [0m[[0mdebug[0m] [0m	Routes$$anonfun$routes$1$$anonfun$applyOrElse$8$$anonfun$apply$8.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$8$$anonfun$apply$8.class[0m
+[0m[[0mdebug[0m] [0m	controllers/javascript/ReverseKosyncProject.class[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/controllers/javascript/ReverseKosyncProject.class[0m
 [0m[[0mdebug[0m] [0m	controllers/ref/ReverseUsers$$anonfun$putUsers$1.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/controllers/ref/ReverseUsers$$anonfun$putUsers$1.class[0m
 [0m[[0mdebug[0m] [0m	controllers/ref/ReverseExpenses.class[0m
@@ -90,6 +102,8 @@
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$1$$anonfun$apply$1.class[0m
 [0m[[0mdebug[0m] [0m	Routes$$anonfun$routes$1$$anonfun$applyOrElse$5.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$5.class[0m
+[0m[[0mdebug[0m] [0m	services/ProjectDAO.class[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/services/ProjectDAO.class[0m
 [0m[[0mdebug[0m] [0m	models/restapi/MetadataPostUser.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/restapi/MetadataPostUser.class[0m
 [0m[[0mdebug[0m] [0m	Routes$$anonfun$Routes$$controllers_Users_postUsers6_invoker$1.class[0m
@@ -106,6 +120,10 @@
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/controllers/ref/ReverseApplication$$anonfun$index$1.class[0m
 [0m[[0mdebug[0m] [0m	controllers/javascript[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/controllers/javascript[0m
+[0m[[0mdebug[0m] [0m	controllers/ref/ReverseKosyncProject$$anonfun$getProject$1.class[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/controllers/ref/ReverseKosyncProject$$anonfun$getProject$1.class[0m
+[0m[[0mdebug[0m] [0m	controllers/KosyncProject.class[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/controllers/KosyncProject.class[0m
 [0m[[0mdebug[0m] [0m	Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.class[0m
 [0m[[0mdebug[0m] [0m	Routes$$anonfun$Routes$$controllers_Assets_at1_invoker$1.class[0m
@@ -138,6 +156,8 @@
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$10$$anonfun$apply$10.class[0m
 [0m[[0mdebug[0m] [0m	Routes$$anonfun$Routes$$controllers_Users_getUserByEmail3_invoker$1.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$Routes$$controllers_Users_getUserByEmail3_invoker$1.class[0m
+[0m[[0mdebug[0m] [0m	Routes$$anonfun$Routes$$controllers_KosyncProject_getProject12_invoker$1.class[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$Routes$$controllers_KosyncProject_getProject12_invoker$1.class[0m
 [0m[[0mdebug[0m] [0m	Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.class[0m
 [0m[[0mdebug[0m] [0m	controllers/ref/ReverseUsers$$anonfun$getUsers$1.class[0m
@@ -152,10 +172,14 @@
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/controllers/ref/ReverseApplication.class[0m
 [0m[[0mdebug[0m] [0m	views/html/main.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/views/html/main.class[0m
+[0m[[0mdebug[0m] [0m	Routes$$anonfun$routes$1$$anonfun$applyOrElse$14.class[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$14.class[0m
 [0m[[0mdebug[0m] [0m	controllers/ref/ReverseUsers$$anonfun$getUserByEmail$1.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/controllers/ref/ReverseUsers$$anonfun$getUserByEmail$1.class[0m
 [0m[[0mdebug[0m] [0m	Routes$$anonfun$documentation$1.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$documentation$1.class[0m
+[0m[[0mdebug[0m] [0m	controllers/ref/ReverseKosyncProject$$anonfun$putProject$1.class[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/controllers/ref/ReverseKosyncProject$$anonfun$putProject$1.class[0m
 [0m[[0mdebug[0m] [0m	Routes$.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$.class[0m
 [0m[[0mdebug[0m] [0m	controllers/ref/ReverseUsers$$anonfun$postUsers$1.class[0m
@@ -242,8 +266,12 @@
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/restapi/HTTPResponse.class[0m
 [0m[[0mdebug[0m] [0m	views/html/index$.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/views/html/index$.class[0m
+[0m[[0mdebug[0m] [0m	models/kosyncProject.class[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/kosyncProject.class[0m
 [0m[[0mdebug[0m] [0m	controllers/ReverseAssets.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/controllers/ReverseAssets.class[0m
+[0m[[0mdebug[0m] [0m	Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.class[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.class[0m
 [0m[[0mdebug[0m] [0m	controllers/ref/ReverseExpenses$$anonfun$getExpenseById$1.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/controllers/ref/ReverseExpenses$$anonfun$getExpenseById$1.class[0m
 [0m[[0mdebug[0m] [0m	services/GroupDAO.class[0m

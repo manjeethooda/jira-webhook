@@ -1,6 +1,6 @@
 // @SOURCE:/home/manjeet/ashu/final/firstTry/apiserver/conf/routes
-// @HASH:4803a8691d472c44a05edc0bad1854ac1c3a0221
-// @DATE:Fri Oct 07 08:34:11 IST 2016
+// @HASH:40ce6747d1cacd0fedb2c780581ed949372c1af7
+// @DATE:Fri Oct 07 12:04:20 IST 2016
 
 package controllers;
 
@@ -10,6 +10,7 @@ public static final controllers.ReverseUsers Users = new controllers.ReverseUser
 public static final controllers.ReverseExpenses Expenses = new controllers.ReverseExpenses();
 public static final controllers.ReverseApplication Application = new controllers.ReverseApplication();
 public static final controllers.ReverseKosyncIssue KosyncIssue = new controllers.ReverseKosyncIssue();
+public static final controllers.ReverseKosyncProject KosyncProject = new controllers.ReverseKosyncProject();
 
 public static class javascript {
 public static final controllers.javascript.ReverseAssets Assets = new controllers.javascript.ReverseAssets();
@@ -17,6 +18,7 @@ public static final controllers.javascript.ReverseUsers Users = new controllers.
 public static final controllers.javascript.ReverseExpenses Expenses = new controllers.javascript.ReverseExpenses();
 public static final controllers.javascript.ReverseApplication Application = new controllers.javascript.ReverseApplication();
 public static final controllers.javascript.ReverseKosyncIssue KosyncIssue = new controllers.javascript.ReverseKosyncIssue();
+public static final controllers.javascript.ReverseKosyncProject KosyncProject = new controllers.javascript.ReverseKosyncProject();
 }
           
 
@@ -26,6 +28,7 @@ public static final controllers.ref.ReverseUsers Users = new controllers.ref.Rev
 public static final controllers.ref.ReverseExpenses Expenses = new controllers.ref.ReverseExpenses();
 public static final controllers.ref.ReverseApplication Application = new controllers.ref.ReverseApplication();
 public static final controllers.ref.ReverseKosyncIssue KosyncIssue = new controllers.ref.ReverseKosyncIssue();
+public static final controllers.ref.ReverseKosyncProject KosyncProject = new controllers.ref.ReverseKosyncProject();
 }
           
 }

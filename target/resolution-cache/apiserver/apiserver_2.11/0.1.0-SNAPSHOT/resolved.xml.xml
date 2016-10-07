@@ -4,7 +4,7 @@
 		module="apiserver_2.11"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20161007083411"
+		publication="20161007120419"
 	>
 		<description>
 		apiserver

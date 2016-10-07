@@ -18,6 +18,7 @@ import services.ExpenseDAO;
 import services.GroupDAO;
 import services.UserDAO;
 import services.IssueDAO;
+import services.ProjectDAO;
 
 import java.net.UnknownHostException;
 
@@ -27,10 +28,12 @@ public final class DAOUtils {
 	public static MongoDBMorphia expenseMongo = null;
 	public static MongoDBMorphia groupMongo = null;
 	public static MongoDBMorphia issueMongo = null;
+	public static MongoDBMorphia projectMongo = null;	
 	public static UserDAO userDAO = null;
 	public static ExpenseDAO expenseDAO = null;
 	public static GroupDAO groupDAO = null;
 	public static IssueDAO issueDAO = null;
+	public static ProjectDAO projectDAO = null;
 
 	/**
 	 * Connects to MongoDB based on the configuration settings.
@@ -42,6 +45,7 @@ public final class DAOUtils {
 		connectToUserMongo();
 		connectToExpenseMongo();
 		connectToIssueMongo();
+		connectToProjectMongo();
 		return true;
 	}
 
@@ -200,6 +204,46 @@ public final class DAOUtils {
      		Logger.info("Issue DB instance not found at given address:port!!");
      	}
      }
+    
+   
+    /**
+     * Connects to kosync Project MongoDB database by reading the configuration file
+     * 
+     * @throws UnknownHostException
+     * 
+     */
+     private static void connectToProjectMongo() {
+     	Logger.info("Trying to connect to kosync Project DB");
+     	try {
+     		String host = Play.application().configuration()
+     				.getString("project.mongodb.uri.host");
+     		String port = Play.application().configuration()
+     				.getString("project.mongodb.uri.port");
+     		String db = Play.application().configuration()
+     				.getString("project.mongodb.uri.db");
+     		projectMongo = new MongoDBMorphia(host, port, db);
+     		projectMongo.morphia.map(kosyncProject.class);
+     		projectMongo.datastore.ensureIndexes();
+     		projectMongo.datastore.ensureCaps();
+     	} catch (Exception e) {
+     		projectMongo = null;
+     		e.printStackTrace();
+     	}
+     	if (projectMongo != null) {
+     		Logger.info("Found DB instance at given address:port");
+     		try {
+     			projectDAO = new ProjectDAO(DAOUtils.projectMongo.datastore);
+     			projectDAO.ensureIndexes();
+     			Logger.info("Connected to project DB");
+     		} catch (Exception e) {
+     			projectDAO = null;
+     			Logger.info("Could not connect to project DB!!");
+     			e.printStackTrace();
+     		}
+     	} else {
+     		Logger.info("project DB instance not found at given address:port!!");
+     	}
+     }
 	
     
     /**
@@ -210,6 +254,7 @@ public final class DAOUtils {
         expenseMongo.closeMongoConnection();
         groupMongo.closeMongoConnection();
     	issueMongo.closeMongoConnection();
+	projectMongo.closeMongoConnection();
     }
 
 }

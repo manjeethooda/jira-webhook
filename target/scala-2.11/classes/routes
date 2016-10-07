@@ -3,22 +3,22 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index()
+GET     /  			                        controllers.Application.index()
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET     /assets/*file               			controllers.Assets.at(path="/public", file)
 
 
 ##################################################################################
 ## USER API
 
 # get a User
-GET     /v1/users/:id 			    controllers.Users.getUserById(id: String)
-GET     /v1/users/email/:email		controllers.Users.getUserByEmail(email: String)
+GET     /v1/users/:id 			    		controllers.Users.getUserById(id: String)
+GET     /v1/users/email/:email				controllers.Users.getUserByEmail(email: String)
 # put a User
-#PUT    /v1/users/:id 				controllers.Users.putUserById(id: String)
+#PUT    /v1/users/:id 					controllers.Users.putUserById(id: String)
 # delete a User
-DELETE  /v1/users/:id 				controllers.Users.deleteUserById(id: String)
+DELETE  /v1/users/:id 					controllers.Users.deleteUserById(id: String)
 
 # get from Users collection
 GET 	/v1/users 					controllers.Users.getUsers()
@@ -35,7 +35,7 @@ PUT 	/v1/users 					controllers.Users.putUsers()
 ## EXPENSE API
 
 # get an Expense
-GET     /v1/expenses/:id 			    controllers.Expenses.getExpenseById(id: String)
+GET     /v1/expenses/:id 			    	controllers.Expenses.getExpenseById(id: String)
 # put a User
 #PUT    /v1/expenses/:id 				controllers.Expenses.putExpenseById(id: String)
 # delete a User
@@ -56,4 +56,15 @@ POST 	/v1/expenses 					controllers.Expenses.postExpenses()
 ## Issue API
 
 #get an Issue
-GET 	/v1/issue				controllers.KosyncIssue.getIssueById()
+GET 	/v1/issue					controllers.KosyncIssue.getIssueById()
+
+##################################################################################
+
+##################################################################################
+## Project API
+
+#GET a project
+GET 	/v1/projects/:key				controllers.KosyncProject.getProject(key: String)
+
+#put a Project
+PUT 	/v1/projects/:key				controllers.KosyncProject.putProject(key: String)

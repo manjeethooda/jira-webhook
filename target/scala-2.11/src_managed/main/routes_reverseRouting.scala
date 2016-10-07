@@ -1,6 +1,6 @@
 // @SOURCE:/home/manjeet/ashu/final/firstTry/apiserver/conf/routes
-// @HASH:4803a8691d472c44a05edc0bad1854ac1c3a0221
-// @DATE:Fri Oct 07 08:34:11 IST 2016
+// @HASH:40ce6747d1cacd0fedb2c780581ed949372c1af7
+// @DATE:Fri Oct 07 12:04:20 IST 2016
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -14,6 +14,8 @@ import _root_.controllers.Assets.Asset
 import Router.queryString
 
 
+// @LINE:70
+// @LINE:67
 // @LINE:59
 // @LINE:47
 // @LINE:45
@@ -153,10 +155,34 @@ def getIssueById(): Call = {
 
 }
                           
+
+// @LINE:70
+// @LINE:67
+class ReverseKosyncProject {
+
+
+// @LINE:70
+def putProject(key:String): Call = {
+   import ReverseRouteContext.empty
+   Call("PUT", _prefix + { _defaultPrefix } + "v1/projects/" + implicitly[PathBindable[String]].unbind("key", dynamicString(key)))
+}
+                        
+
+// @LINE:67
+def getProject(key:String): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "v1/projects/" + implicitly[PathBindable[String]].unbind("key", dynamicString(key)))
+}
+                        
+
+}
+                          
 }
                   
 
 
+// @LINE:70
+// @LINE:67
 // @LINE:59
 // @LINE:47
 // @LINE:45
@@ -345,10 +371,42 @@ def getIssueById : JavascriptReverseRoute = JavascriptReverseRoute(
 
 }
               
+
+// @LINE:70
+// @LINE:67
+class ReverseKosyncProject {
+
+
+// @LINE:70
+def putProject : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.KosyncProject.putProject",
+   """
+      function(key) {
+      return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "v1/projects/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("key", encodeURIComponent(key))})
+      }
+   """
+)
+                        
+
+// @LINE:67
+def getProject : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.KosyncProject.getProject",
+   """
+      function(key) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "v1/projects/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("key", encodeURIComponent(key))})
+      }
+   """
+)
+                        
+
+}
+              
 }
         
 
 
+// @LINE:70
+// @LINE:67
 // @LINE:59
 // @LINE:47
 // @LINE:45
@@ -407,7 +465,7 @@ def postUsers(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 // @LINE:21
 def deleteUserById(id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Users.deleteUserById(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.Users", "deleteUserById", Seq(classOf[String]), "DELETE", """ put a User
-PUT    /v1/users/:id 				controllers.Users.putUserById(id: String)
+PUT    /v1/users/:id 					controllers.Users.putUserById(id: String)
  delete a User""", _prefix + """v1/users/$id<[^/]+>""")
 )
                       
@@ -474,6 +532,26 @@ class ReverseKosyncIssue {
 // @LINE:59
 def getIssueById(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.KosyncIssue.getIssueById(), HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncIssue", "getIssueById", Seq(), "GET", """get an Issue""", _prefix + """v1/issue""")
+)
+                      
+
+}
+                          
+
+// @LINE:70
+// @LINE:67
+class ReverseKosyncProject {
+
+
+// @LINE:70
+def putProject(key:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.KosyncProject.putProject(key), HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncProject", "putProject", Seq(classOf[String]), "PUT", """put a Project""", _prefix + """v1/projects/$key<[^/]+>""")
+)
+                      
+
+// @LINE:67
+def getProject(key:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.KosyncProject.getProject(key), HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncProject", "getProject", Seq(classOf[String]), "GET", """GET a project""", _prefix + """v1/projects/$key<[^/]+>""")
 )
                       
 

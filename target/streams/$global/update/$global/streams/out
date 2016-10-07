@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for apiserver#apiserver_2.11;0.1.0-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies apiserver#apiserver_2.11;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.1 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6d4304d2[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2348aa7b[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.1[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.11.1[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.1 in sbt-chain[0m
@@ -1376,7 +1376,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies apiserver#apiserver_2.11;0.1.0-SNAPSHOT->com.atlassian.event#atlassian-event;3.1.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies apiserver#apiserver_2.11;0.1.0-SNAPSHOT->com.atlassian.jira#jira-rest-java-client-api;3.0.0 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.atlassian.jira#jira-rest-java-client-api;3.0.0 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7148536e[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2d577725[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.atlassian.jira#jira-rest-java-client-api;3.0.0[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: com.atlassian.jira#jira-rest-java-client-api;3.0.0[0m
 [0m[[0mdebug[0m] [0m	found com.atlassian.jira#jira-rest-java-client-api;3.0.0 in sbt-chain[0m
@@ -1815,7 +1815,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/sun/xml/bind/jaxb-impl/2.2.7/jaxb-impl-2.2.7.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/sun/xml/bind/jaxb-impl/2.2.7/jaxb-impl-2.2.7.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/sun/xml/bind/jaxb-impl/2.2.7/jaxb-impl-2.2.7.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.sun.xml.bind#jaxb-impl;2.2.7!jaxb-impl.pom(pom.original) (1307ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.sun.xml.bind#jaxb-impl;2.2.7!jaxb-impl.pom(pom.original) (760ms)[0m
 [0m[[0minfo[0m] [0mResolving net.java#jvnet-parent;1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: net.java#jvnet-parent;1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: net.java#jvnet-parent;1[0m
@@ -1839,7 +1839,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/sun/xml/bind/jaxb-core/2.2.7/jaxb-core-2.2.7.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/sun/xml/bind/jaxb-core/2.2.7/jaxb-core-2.2.7.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/sun/xml/bind/jaxb-core/2.2.7/jaxb-core-2.2.7.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.sun.xml.bind#jaxb-core;2.2.7!jaxb-core.pom(pom.original) (1235ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.sun.xml.bind#jaxb-core;2.2.7!jaxb-core.pom(pom.original) (701ms)[0m
 [0m[[0minfo[0m] [0mResolving net.java#jvnet-parent;1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: net.java#jvnet-parent;1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: net.java#jvnet-parent;1[0m
@@ -1862,7 +1862,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.2.7/jaxb-api-2.2.7.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.2.7/jaxb-api-2.2.7.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.2.7/jaxb-api-2.2.7.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] javax.xml.bind#jaxb-api;2.2.7!jaxb-api.pom(pom.original) (1329ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] javax.xml.bind#jaxb-api;2.2.7!jaxb-api.pom(pom.original) (1205ms)[0m
 [0m[[0minfo[0m] [0mResolving net.java#jvnet-parent;1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: net.java#jvnet-parent;1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: net.java#jvnet-parent;1[0m
@@ -1904,7 +1904,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/sun/xml/fastinfoset/FastInfoset/1.2.12/FastInfoset-1.2.12.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/sun/xml/fastinfoset/FastInfoset/1.2.12/FastInfoset-1.2.12.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/sun/xml/fastinfoset/FastInfoset/1.2.12/FastInfoset-1.2.12.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.sun.xml.fastinfoset#FastInfoset;1.2.12!FastInfoset.pom(pom.original) (1846ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.sun.xml.fastinfoset#FastInfoset;1.2.12!FastInfoset.pom(pom.original) (675ms)[0m
 [0m[[0minfo[0m] [0mResolving com.sun.xml.fastinfoset#fastinfoset-project;1.2.12 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.sun.xml.fastinfoset#fastinfoset-project;1.2.12 {}[0m
 [0m[[0mdebug[0m] [0m		tried /home/manjeet/.ivy2/local/com.sun.xml.fastinfoset/fastinfoset-project/1.2.12/ivys/ivy.xml[0m
@@ -1920,7 +1920,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/sun/xml/fastinfoset/fastinfoset-project/1.2.12/fastinfoset-project-1.2.12.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/sun/xml/fastinfoset/fastinfoset-project/1.2.12/fastinfoset-project-1.2.12.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/sun/xml/fastinfoset/fastinfoset-project/1.2.12/fastinfoset-project-1.2.12.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.sun.xml.fastinfoset#fastinfoset-project;1.2.12!fastinfoset-project.pom(pom.original) (1168ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.sun.xml.fastinfoset#fastinfoset-project;1.2.12!fastinfoset-project.pom(pom.original) (887ms)[0m
 [0m[[0minfo[0m] [0mResolving net.java#jvnet-parent;1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: net.java#jvnet-parent;1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: net.java#jvnet-parent;1[0m
@@ -2662,7 +2662,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/avaje/ebeanorm/avaje-ebeanorm/3.3.4/avaje-ebeanorm-3.3.4.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/avaje/ebeanorm/avaje-ebeanorm/3.3.4/avaje-ebeanorm-3.3.4.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/avaje/ebeanorm/avaje-ebeanorm/3.3.4/avaje-ebeanorm-3.3.4.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.avaje.ebeanorm#avaje-ebeanorm;3.3.4!avaje-ebeanorm.pom(pom.original) (1138ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.avaje.ebeanorm#avaje-ebeanorm;3.3.4!avaje-ebeanorm.pom(pom.original) (699ms)[0m
 [0m[[0minfo[0m] [0mResolving org.avaje#avaje-javaparent;1.2 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.avaje#avaje-javaparent;1.2 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.avaje#avaje-javaparent;1.2[0m
@@ -15135,7 +15135,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.1!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.2!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.11!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 64324ms :: artifacts dl 230ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 59294ms :: artifacts dl 87ms[0m
 [0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT compile produced in /home/manjeet/ashu/final/firstTry/apiserver/target/resolution-cache/reports/apiserver-apiserver_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT runtime produced in /home/manjeet/ashu/final/firstTry/apiserver/target/resolution-cache/reports/apiserver-apiserver_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT test produced in /home/manjeet/ashu/final/firstTry/apiserver/target/resolution-cache/reports/apiserver-apiserver_2.11-test.xml[0m
@@ -15149,5 +15149,5 @@
 [0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT docs produced in /home/manjeet/ashu/final/firstTry/apiserver/target/resolution-cache/reports/apiserver-apiserver_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT pom produced in /home/manjeet/ashu/final/firstTry/apiserver/target/resolution-cache/reports/apiserver-apiserver_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT scala-tool produced in /home/manjeet/ashu/final/firstTry/apiserver/target/resolution-cache/reports/apiserver-apiserver_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (64324ms resolve - 230ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (59294ms resolve - 87ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

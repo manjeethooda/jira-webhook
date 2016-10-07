@@ -18,6 +18,8 @@
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/app/services/GroupDAO.java[0m
 [0m[[0mdebug[0m] [0m	application-context.xml[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/conf/application-context.xml[0m
+[0m[[0mdebug[0m] [0m	controllers/KosyncProject.java[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/app/controllers/KosyncProject.java[0m
 [0m[[0mdebug[0m] [0m	controllers/Expenses.java[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/app/controllers/Expenses.java[0m
 [0m[[0mdebug[0m] [0m	models/UserRef.java[0m
@@ -62,6 +64,8 @@
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/app/models/Group.java[0m
 [0m[[0mdebug[0m] [0m	controllers/Resource.java[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/app/controllers/Resource.java[0m
+[0m[[0mdebug[0m] [0m	services/ProjectDAO.java[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/app/services/ProjectDAO.java[0m
 [0m[[0mdebug[0m] [0m	models/MongoDBMorphia.java[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/app/models/MongoDBMorphia.java[0m
 [0m[[0mdebug[0m] [0m	controllers/KosyncIssue.java[0m
@@ -70,4 +74,6 @@
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/conf/application-logger.xml[0m
 [0m[[0mdebug[0m] [0m	utils/ObjectID_Serializer.java[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/app/utils/ObjectID_Serializer.java[0m
+[0m[[0mdebug[0m] [0m	models/kosyncProject.java[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/app/models/kosyncProject.java[0m
 [0m[[0minfo[0m] [0mDone packaging.[0m
