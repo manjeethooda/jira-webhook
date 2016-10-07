@@ -1,6 +1,6 @@
 // @SOURCE:/home/manjeet/ashu/final/firstTry/apiserver/conf/routes
-// @HASH:40ce6747d1cacd0fedb2c780581ed949372c1af7
-// @DATE:Fri Oct 07 14:40:43 IST 2016
+// @HASH:0ef5b5b1e3230ceea05a90b9d33e94f4d3cb9860
+// @DATE:Fri Oct 07 16:16:42 IST 2016
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -162,9 +162,9 @@ class ReverseKosyncProject {
 
 
 // @LINE:70
-def putProject(key:String): Call = {
+def postProjects(): Call = {
    import ReverseRouteContext.empty
-   Call("PUT", _prefix + { _defaultPrefix } + "v1/projects/" + implicitly[PathBindable[String]].unbind("key", dynamicString(key)))
+   Call("POST", _prefix + { _defaultPrefix } + "v1/projects")
 }
                         
 
@@ -378,11 +378,11 @@ class ReverseKosyncProject {
 
 
 // @LINE:70
-def putProject : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.KosyncProject.putProject",
+def postProjects : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.KosyncProject.postProjects",
    """
-      function(key) {
-      return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "v1/projects/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("key", encodeURIComponent(key))})
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "v1/projects"})
       }
    """
 )
@@ -544,8 +544,8 @@ class ReverseKosyncProject {
 
 
 // @LINE:70
-def putProject(key:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.KosyncProject.putProject(key), HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncProject", "putProject", Seq(classOf[String]), "PUT", """put a Project""", _prefix + """v1/projects/$key<[^/]+>""")
+def postProjects(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.KosyncProject.postProjects(), HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncProject", "postProjects", Seq(), "POST", """put a Project""", _prefix + """v1/projects""")
 )
                       
 

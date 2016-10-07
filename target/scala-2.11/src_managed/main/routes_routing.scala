@@ -1,6 +1,6 @@
 // @SOURCE:/home/manjeet/ashu/final/firstTry/apiserver/conf/routes
-// @HASH:40ce6747d1cacd0fedb2c780581ed949372c1af7
-// @DATE:Fri Oct 07 14:40:43 IST 2016
+// @HASH:0ef5b5b1e3230ceea05a90b9d33e94f4d3cb9860
+// @DATE:Fri Oct 07 16:16:42 IST 2016
 
 
 import play.core._
@@ -125,12 +125,12 @@ HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncProject", "getPr
         
 
 // @LINE:70
-private[this] lazy val controllers_KosyncProject_putProject13_route = Route("PUT", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("v1/projects/"),DynamicPart("key", """[^/]+""",true))))
-private[this] lazy val controllers_KosyncProject_putProject13_invoker = createInvoker(
-controllers.KosyncProject.putProject(fakeValue[String]),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncProject", "putProject", Seq(classOf[String]),"PUT", """put a Project""", Routes.prefix + """v1/projects/$key<[^/]+>"""))
+private[this] lazy val controllers_KosyncProject_postProjects13_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("v1/projects"))))
+private[this] lazy val controllers_KosyncProject_postProjects13_invoker = createInvoker(
+controllers.KosyncProject.postProjects(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncProject", "postProjects", Nil,"POST", """put a Project""", Routes.prefix + """v1/projects"""))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/users/$id<[^/]+>""","""controllers.Users.getUserById(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/users/email/$email<[^/]+>""","""controllers.Users.getUserByEmail(email:String)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/users/$id<[^/]+>""","""controllers.Users.deleteUserById(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/users""","""controllers.Users.getUsers()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/users""","""controllers.Users.postUsers()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/users""","""controllers.Users.putUsers()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/expenses/$id<[^/]+>""","""controllers.Expenses.getExpenseById(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/expenses""","""controllers.Expenses.getExpenses()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/expenses""","""controllers.Expenses.postExpenses()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/issue""","""controllers.KosyncIssue.getIssueById()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/projects/$key<[^/]+>""","""controllers.KosyncProject.getProject(key:String)"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/projects/$key<[^/]+>""","""controllers.KosyncProject.putProject(key:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/users/$id<[^/]+>""","""controllers.Users.getUserById(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/users/email/$email<[^/]+>""","""controllers.Users.getUserByEmail(email:String)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/users/$id<[^/]+>""","""controllers.Users.deleteUserById(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/users""","""controllers.Users.getUsers()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/users""","""controllers.Users.postUsers()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/users""","""controllers.Users.putUsers()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/expenses/$id<[^/]+>""","""controllers.Expenses.getExpenseById(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/expenses""","""controllers.Expenses.getExpenses()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/expenses""","""controllers.Expenses.postExpenses()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/issue""","""controllers.KosyncIssue.getIssueById()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/projects/$key<[^/]+>""","""controllers.KosyncProject.getProject(key:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/projects""","""controllers.KosyncProject.postProjects()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -243,9 +243,9 @@ case controllers_KosyncProject_getProject12_route(params) => {
         
 
 // @LINE:70
-case controllers_KosyncProject_putProject13_route(params) => {
-   call(params.fromPath[String]("key", None)) { (key) =>
-        controllers_KosyncProject_putProject13_invoker.call(controllers.KosyncProject.putProject(key))
+case controllers_KosyncProject_postProjects13_route(params) => {
+   call { 
+        controllers_KosyncProject_postProjects13_invoker.call(controllers.KosyncProject.postProjects())
    }
 }
         

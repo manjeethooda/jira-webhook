@@ -1,0 +1,9 @@
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X POST --data-binary "@sample.json" http://localhost:9000/v1/projects
+
+curl -D- -u admin:Webhook@2016 -X POST --data-binary "@sample.json"  -H "Content-Type: application/json" https://testingjirawebhook.atlassian.net/rest/api/2/issue/
+
+curl -vX POST http://localhost:9000/v1/projects -d @sample.json \--header "Content-Type: application/json"
+
+curl -X POSTn-H 'Content-Type:application/json' -H 'Accept: application/json' --data-binary @sample.json http://localhost:9000/v1/projects -v -s
+
+

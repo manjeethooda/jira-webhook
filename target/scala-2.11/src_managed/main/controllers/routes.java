@@ -1,6 +1,6 @@
 // @SOURCE:/home/manjeet/ashu/final/firstTry/apiserver/conf/routes
-// @HASH:40ce6747d1cacd0fedb2c780581ed949372c1af7
-// @DATE:Fri Oct 07 14:40:43 IST 2016
+// @HASH:0ef5b5b1e3230ceea05a90b9d33e94f4d3cb9860
+// @DATE:Fri Oct 07 16:16:42 IST 2016
 
 package controllers;
 

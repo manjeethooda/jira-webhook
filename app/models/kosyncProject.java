@@ -42,7 +42,7 @@ public class kosyncProject {
 
 	@Required
 	@Indexed
-	public String jiraId;
+	public String jiraKey;
 	
 	
 	@Required
@@ -52,7 +52,7 @@ public class kosyncProject {
 	public String jiraUser;
 	
 	@Required
-	public String jiraAuth;	
+	public String jiraAuthKey;	
 	
 	public String lastUpdatedAt = new DateTime(DateTimeZone.UTC).toString();
 	public String createdAt = new DateTime(DateTimeZone.UTC).toString();
@@ -73,8 +73,8 @@ public class kosyncProject {
 		this._id = new ObjectId(id);
 	}
 
-	public void setJiraId(String jiraId) {
-		this.jiraId = jiraId;
+	public void setJiraKey(String jiraKey) {
+		this.jiraKey = jiraKey;
 	}
 	
 	public void setjiraURL(String jiraURL) {
@@ -85,8 +85,8 @@ public class kosyncProject {
 		this.jiraUser = jiraUser;
 	}
 
-	public void setJiraAuth(String jiraAuth) {
-		this.jiraAuth = jiraAuth;
+	public void setJiraAuthKey(String jiraAuthKey) {
+		this.jiraAuthKey = jiraAuthKey;
 	}
 
 	public ObjectId get_id() {
@@ -98,7 +98,7 @@ public class kosyncProject {
 	}
 
 	public String getJiraId(){
-		return this.jiraId;
+		return this.jiraKey;
 	}
 
 	public String getJiraURL(){
@@ -110,6 +110,6 @@ public class kosyncProject {
 	}
 
 	public String getJiraAuth(){
-		return this.jiraAuth;
+		return this.jiraAuthKey;
 	}
 }
