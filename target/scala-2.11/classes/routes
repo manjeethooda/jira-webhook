@@ -1,0 +1,59 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+
+##################################################################################
+## USER API
+
+# get a User
+GET     /v1/users/:id 			    controllers.Users.getUserById(id: String)
+GET     /v1/users/email/:email		controllers.Users.getUserByEmail(email: String)
+# put a User
+#PUT    /v1/users/:id 				controllers.Users.putUserById(id: String)
+# delete a User
+DELETE  /v1/users/:id 				controllers.Users.deleteUserById(id: String)
+
+# get from Users collection
+GET 	/v1/users 					controllers.Users.getUsers()
+# post into Users collection
+POST 	/v1/users 					controllers.Users.postUsers()
+# put into Users collection
+PUT 	/v1/users 					controllers.Users.putUsers()
+# delete from Users collection
+# DELETE /v1/users 					controllers.Users.deleteUsers()
+
+##################################################################################
+
+##################################################################################
+## EXPENSE API
+
+# get an Expense
+GET     /v1/expenses/:id 			    controllers.Expenses.getExpenseById(id: String)
+# put a User
+#PUT    /v1/expenses/:id 				controllers.Expenses.putExpenseById(id: String)
+# delete a User
+#DELETE  /v1/expenses/:id 				controllers.Expenses.deleteExpenseById(id: String)
+
+# get from Expenses collection
+GET 	/v1/expenses 					controllers.Expenses.getExpenses()
+# post into Users collection
+POST 	/v1/expenses 					controllers.Expenses.postExpenses()
+# put into Users collection
+# PUT 	/v1/expenses 					controllers.Expenses.putExpenses()
+# delete from Users collection
+# DELETE /v1/expenses 					controllers.Expenses.deleteExpenses()
+
+##################################################################################
+
+##################################################################################
+## Issue API
+
+#get an Issue
+GET 	/v1/issue				controllers.KosyncIssue.getIssueById()

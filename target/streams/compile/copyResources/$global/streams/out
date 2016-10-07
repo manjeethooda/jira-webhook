@@ -1,0 +1,5 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/home/manjeet/ashu/final/firstTry/apiserver/conf/routes,/home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/home/manjeet/ashu/final/firstTry/apiserver/conf/application-context.xml,/home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/application-context.xml)[0m
+[0m[[0mdebug[0m] [0m	(/home/manjeet/ashu/final/firstTry/apiserver/conf/application.conf,/home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/manjeet/ashu/final/firstTry/apiserver/conf/application-logger.xml,/home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/application-logger.xml)[0m
