@@ -38,7 +38,7 @@ Seq[Any](format.raw/*1.19*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Fri Oct 07 12:04:23 IST 2016
+                  DATE: Fri Oct 07 13:34:40 IST 2016
                   SOURCE: /home/manjeet/ashu/final/firstTry/apiserver/app/views/index.scala.html
                   HASH: d81edcc7c92d43075c9cec646b97b20cc103c477
                   MATRIX: 505->1|610->18|638->21|669->44|708->46|740->53|754->59|807->92|839->95

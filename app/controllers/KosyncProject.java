@@ -74,7 +74,7 @@ public class KosyncProject extends Controller {
 	static String jiraAuth = Play.application().configuration().getString("jiraAuth");
 	static URI jiraServerUri = URI.create(Play.application().configuration().getString("jiraUri"));
 
-	public static Result getProject(String key) {
+	public static Result postProject(String key) {
 		// 1. Start stopwatch
 		StopWatch stopWatch = new StopWatch();
 		stopWatch.start();
@@ -117,29 +117,34 @@ public class KosyncProject extends Controller {
 					} finally {
 						restClient.close();
 					}
-
+					System.out.println("printing jira id");
+					System.out.println(project.getId().toString());
+					System.out.println(projectDAO.getByJiraId(project.getId().toString()));
 					if (projectDAO.getByJiraId(project.getId().toString()) != null) {
 						metadata.setNewRecord(false);
 						httpStatus.setCode(HTTPStatusCode.BAD_REQUEST);
 						httpStatus.setDeveloperMessage("Project with same jira ID already exists");
-					} else if (projectDAO.get(project.getSelf().toString()) != null) {
+					} else if (projectDAO.getByJiraURL(project.getSelf().toString()) != null) {
 						metadata.setNewRecord(false);
 						httpStatus.setCode(HTTPStatusCode.BAD_REQUEST);
 						httpStatus.setDeveloperMessage("Project with same URL already exists");
 					} else {
+						System.out.println("writing to kProject");
 						kProject.setJiraId(project.getId().toString());
 						kProject.setjiraURL(project.getSelf().toString());
-
+						System.out.println("writing to kProject");
+						
 						// @ TODO :
 						kProject.setJiraUser(jiraUser);
 						kProject.setJiraAuth(jiraAuth);
+						System.out.println("written to kProject");
 
 						projectDAO.save(kProject, WriteConcern.SAFE);
 						kProject = projectDAO.get(kProject.get_id());
 						if (kProject == null) {
 							httpStatus.setCode(HTTPStatusCode.GONE);
 							httpStatus
-									.setDeveloperMessage("Project was written to DB but was not returned successfully");
+							.setDeveloperMessage("Project was written to DB but was not returned successfully");
 						} else {
 							httpStatus.setCode(HTTPStatusCode.RESOURCE_CREATED);
 							httpStatus.setDeveloperMessage("Project was successfully written to DB");
@@ -170,14 +175,13 @@ public class KosyncProject extends Controller {
 		return status(httpStatus.code, Json.toJson(httpResponse));
 	}
 
-	public static Result putProject(String key) {
+	public static Result getProject(String key) {
 		// 1. Start stopwatch
 		StopWatch stopWatch = new StopWatch();
 		stopWatch.start();
 
 		// 2. Initialize http response objects
 		HTTPStatus httpStatus = new HTTPStatus();
-		Project project = null;
 		kosyncProject kProject = new kosyncProject();
 		MetadataPostUser metadata = new MetadataPostUser();
 		String debugInfo = null;
@@ -189,65 +193,7 @@ public class KosyncProject extends Controller {
 				httpStatus.setCode(HTTPStatusCode.GONE);
 				httpStatus.setDeveloperMessage("Not connected to Project DB");
 			} else {
-				try {
-					final AsynchronousJiraRestClientFactory factory = new AsynchronousJiraRestClientFactory();
-					final JiraRestClient restClient = factory.createWithBasicHttpAuthentication(jiraServerUri, jiraUser,
-							jiraAuth);
-
-					try {
-						final int buildNumber = restClient.getMetadataClient().getServerInfo().claim().getBuildNumber();
-
-						// first let's get and print all visible projects (only
-						// jira4.3+)
-						/*
-						 * if (buildNumber >=
-						 * ServerVersionConstants.BN_JIRA_4_3) { final
-						 * Iterable<BasicProject> allProjects =
-						 * restClient.getProjectClient().getAllProjects().claim(
-						 * ); for (BasicProject project : allProjects) {
-						 * System.out.println(project); } }
-						 */
-
-						project = restClient.getProjectClient().getProject(key).claim();
-						System.out.println(project);
-					} finally {
-						restClient.close();
-					}
-
-					if (projectDAO.getByJiraId(project.getId().toString()) != null) {
-						metadata.setNewRecord(false);
-						httpStatus.setCode(HTTPStatusCode.BAD_REQUEST);
-						httpStatus.setDeveloperMessage("Project with same jira ID already exists");
-					} else if (projectDAO.get(project.getSelf().toString()) != null) {
-						metadata.setNewRecord(false);
-						httpStatus.setCode(HTTPStatusCode.BAD_REQUEST);
-						httpStatus.setDeveloperMessage("Project with same URL already exists");
-					} else {
-						kProject.setJiraId(project.getId().toString());
-						kProject.setjiraURL(project.getSelf().toString());
-
-						// @ TODO :
-						kProject.setJiraUser(jiraUser);
-						kProject.setJiraAuth(jiraAuth);
-
-						projectDAO.save(kProject, WriteConcern.SAFE);
-						kProject = projectDAO.get(kProject.get_id());
-						if (kProject == null) {
-							httpStatus.setCode(HTTPStatusCode.GONE);
-							httpStatus
-									.setDeveloperMessage("Project was written to DB but was not returned successfully");
-						} else {
-							httpStatus.setCode(HTTPStatusCode.RESOURCE_CREATED);
-							httpStatus.setDeveloperMessage("Project was successfully written to DB");
-						}
-					}
-				} catch (Exception e) {
-					kProject = null;
-					httpStatus.setCode(HTTPStatusCode.INTERNAL_SERVER_ERROR);
-					httpStatus.setDeveloperMessage("Exception occured while writing to Project DB");
-					debugInfo = ExceptionUtils.getFullStackTrace(e.fillInStackTrace());
-					e.printStackTrace();
-				}
+				
 			}
 		} catch (Exception e1) {
 			httpStatus.setCode(HTTPStatusCode.BAD_REQUEST);
@@ -262,7 +208,9 @@ public class KosyncProject extends Controller {
 		metadata.setQTime(stopWatch.getTime());
 		HTTPResponse<kosyncProject, MetadataPostUser, String> httpResponse = new HTTPResponse<kosyncProject, MetadataPostUser, String>(
 				httpStatus, metadata, kProject, debugInfo);
+		System.out.println(kProject);
 		return status(httpStatus.code, Json.toJson(httpResponse));
+	
 	}
 
 	/**

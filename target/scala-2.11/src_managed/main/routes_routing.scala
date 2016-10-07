@@ -1,6 +1,6 @@
 // @SOURCE:/home/manjeet/ashu/final/firstTry/apiserver/conf/routes
 // @HASH:40ce6747d1cacd0fedb2c780581ed949372c1af7
-// @DATE:Fri Oct 07 12:04:20 IST 2016
+// @DATE:Fri Oct 07 14:40:43 IST 2016
 
 
 import play.core._
