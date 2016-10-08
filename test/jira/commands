@@ -4,6 +4,6 @@ curl -D- -u admin:Webhook@2016 -X POST --data-binary "@sample.json"  -H "Content
 
 curl -vX POST http://localhost:9000/v1/projects -d @sample.json \--header "Content-Type: application/json"
 
-curl -X POSTn-H 'Content-Type:application/json' -H 'Accept: application/json' --data-binary @sample.json http://localhost:9000/v1/projects -v -s
+curl -X POST -H 'Content-Type:application/json' -H 'Accept: application/json' --data-binary @sample.json http://localhost:9000/v1/projects -v -s
 
 

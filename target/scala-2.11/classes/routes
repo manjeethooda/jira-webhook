@@ -64,8 +64,8 @@ GET 	/v1/issue					controllers.KosyncIssue.getIssueById()
 ## Project API
 
 #GET a project
-GET 	/v1/projects/:key				controllers.KosyncProject.getProject(key: String)
+GET 	/v1/projects/:key				controllers.KosyncProjects.getProject(key: String)
 
 #put a Project
-POST 	/v1/projects					controllers.KosyncProject.postProjects()
+POST 	/v1/projects					controllers.KosyncProjects.postProjects()
 

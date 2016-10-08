@@ -1,25 +1,26 @@
+[0m[[0mdebug[0m] [0mInvalidating /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/KosyncProject.class: stamp changed from lastModified(1475896902000) to lastModified(1475896908000)[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
 [0m[[0mdebug[0m] [0m	removed:Set()[0m
 [0m[[0mdebug[0m] [0m	added: Set()[0m
-[0m[[0mdebug[0m] [0m	modified: Set(/home/manjeet/ashu/final/firstTry/apiserver/app/controllers/KosyncProject.java)[0m
+[0m[[0mdebug[0m] [0m	modified: Set()[0m
 [0m[[0mdebug[0m] [0mRemoved products: Set()[0m
 [0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
-[0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
-[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/home/manjeet/ashu/final/firstTry/apiserver/app/controllers/KosyncProject.java)[0m
+[0m[[0mdebug[0m] [0mModified binary dependencies: Set(/home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/KosyncProject.class)[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set()[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
 [0m[[0mdebug[0m] [0m	product: Set()[0m
-[0m[[0mdebug[0m] [0m	binary dep: Set()[0m
+[0m[[0mdebug[0m] [0m	binary dep: Set(/home/manjeet/ashu/final/firstTry/apiserver/app/utils/DAOUtils.java, /home/manjeet/ashu/final/firstTry/apiserver/app/controllers/KosyncProjects.java, /home/manjeet/ashu/final/firstTry/apiserver/app/services/ProjectDAO.java)[0m
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
-[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/home/manjeet/ashu/final/firstTry/apiserver/app/controllers/KosyncProject.java)[0m
-[0m[[0minfo[0m] [0mCompiling 1 Java source to /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes...[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/home/manjeet/ashu/final/firstTry/apiserver/app/utils/DAOUtils.java, /home/manjeet/ashu/final/firstTry/apiserver/app/controllers/KosyncProjects.java, /home/manjeet/ashu/final/firstTry/apiserver/app/services/ProjectDAO.java)[0m
+[0m[[0minfo[0m] [0mCompiling 3 Java sources to /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes...[0m
 [0m[[0mdebug[0m] [0mAttempting to call javac directly...[0m
 [0m[[0mdebug[0m] [0mcom.sun.tools.javac.Main not found with appropriate method signature; forking javac instead[0m
-[0m[[0mdebug[0m] [0mForking javac: javac @/tmp/sbt_815a78a7/argfile[0m
+[0m[[0mdebug[0m] [0mForking javac: javac @/tmp/sbt_11a8c03a/argfile[0m
 [0m[[0mdebug[0m] [0mjavac returned exit code: 0[0m
-[0m[[0mdebug[0m] [0mJava compilation took 1.993524062 s[0m
-[0m[[0mdebug[0m] [0mJava analysis took 0.581889034 s[0m
+[0m[[0mdebug[0m] [0mJava compilation took 1.036644652 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.219908361 s[0m
 [0m[[0mdebug[0m] [0mNew invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m

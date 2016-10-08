@@ -1,6 +1,6 @@
 package services;
 
-import models.kosyncProject;
+import models.KosyncProject;
 
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.Datastore;
@@ -13,7 +13,7 @@ import utils.DAOUtils;
  * @author sanket
  *
  */
-public class ProjectDAO extends BasicDAO<kosyncProject, ObjectId> {
+public class ProjectDAO extends BasicDAO<KosyncProject, ObjectId> {
 
 	String collectionName = null;
 
@@ -21,36 +21,36 @@ public class ProjectDAO extends BasicDAO<kosyncProject, ObjectId> {
 	 * @param datastore
 	 */
 	public ProjectDAO(Datastore datastore) {
-		super(kosyncProject.class, datastore);
+		super(KosyncProject.class, datastore);
 
 	}
 
-	public kosyncProject get(String id) {
+	public KosyncProject get(String id) {
 		return super.get(new ObjectId(id));
 	}
 
 	
-	public kosyncProject getByJiraId(String jiraId) {
+	public KosyncProject getByJiraProjectKey(String jiraProjectKey) {
 	    Datastore db = DAOUtils.projectMongo.datastore;
-            Query<kosyncProject> q = db.createQuery(kosyncProject.class);
+            Query<KosyncProject> q = db.createQuery(KosyncProject.class);
             q.or(
-                q.criteria("jiraId").equal(jiraId)
+                q.criteria("jiraProjectKey").equal(jiraProjectKey)
             );
             return q.get();
 	}
 	
-	public kosyncProject getByJiraURL(String jiraURL) {
+	public KosyncProject getByJiraProjectURL(String jiraProjectURL) {
 	    Datastore db = DAOUtils.projectMongo.datastore;
-            Query<kosyncProject> q = db.createQuery(kosyncProject.class);
+            Query<KosyncProject> q = db.createQuery(KosyncProject.class);
             q.or(
-                q.criteria("jiraURL").equal(jiraURL)
+                q.criteria("jiraProjectURL").equal(jiraProjectURL)
             );
             return q.get();
 	}
 
-	/*public kosyncProject getByJiraUser(String jiraUser) {
+	/*public KosyncProject getByJiraUser(String jiraUser) {
 	    Datastore db = DAOUtils.projectMongo.datastore;
-            Query<kosyncProject> q = db.createQuery(kosyncProject.class);
+            Query<KosyncProject> q = db.createQuery(KosyncProject.class);
             q.or(
                 q.criteria("jiraUser").equal(jiraUser)
             );

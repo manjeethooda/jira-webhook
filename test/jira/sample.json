@@ -1,8 +1,8 @@
 { 
-	"jiraURL": "https://testingjirawebhook.atlassian.net",
-	"jiraUser": "admin", 
+	"jiraProjectURL": "https://testingjirawebhook.atlassian.net",
+	"jiraUsername": "admin", 
 	"jiraAuthKey": "Webhook@2016", 
-	"project" :  
+	"jiraProject" :  
 	{  
 		"expand": "description,lead,issueTypes,url,projectKeys",
 		"self": "https://testingjirawebhook.atlassian.net/rest/api/2/project/10000",

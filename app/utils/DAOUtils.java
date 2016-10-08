@@ -222,7 +222,7 @@ public final class DAOUtils {
      		String db = Play.application().configuration()
      				.getString("project.mongodb.uri.db");
      		projectMongo = new MongoDBMorphia(host, port, db);
-     		projectMongo.morphia.map(kosyncProject.class);
+     		projectMongo.morphia.map(KosyncProject.class);
      		projectMongo.datastore.ensureIndexes();
      		projectMongo.datastore.ensureCaps();
      	} catch (Exception e) {

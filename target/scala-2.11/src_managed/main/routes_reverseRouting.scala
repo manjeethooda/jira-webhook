@@ -1,6 +1,6 @@
 // @SOURCE:/home/manjeet/ashu/final/firstTry/apiserver/conf/routes
-// @HASH:0ef5b5b1e3230ceea05a90b9d33e94f4d3cb9860
-// @DATE:Fri Oct 07 16:16:42 IST 2016
+// @HASH:3a19dd9608c3b9fce749bd6d1e08d9f38e539eda
+// @DATE:Fri Oct 07 18:10:16 IST 2016
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -38,6 +38,28 @@ class ReverseAssets {
 def at(file:String): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
+}
+                        
+
+}
+                          
+
+// @LINE:70
+// @LINE:67
+class ReverseKosyncProjects {
+
+
+// @LINE:70
+def postProjects(): Call = {
+   import ReverseRouteContext.empty
+   Call("POST", _prefix + { _defaultPrefix } + "v1/projects")
+}
+                        
+
+// @LINE:67
+def getProject(key:String): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "v1/projects/" + implicitly[PathBindable[String]].unbind("key", dynamicString(key)))
 }
                         
 
@@ -155,28 +177,6 @@ def getIssueById(): Call = {
 
 }
                           
-
-// @LINE:70
-// @LINE:67
-class ReverseKosyncProject {
-
-
-// @LINE:70
-def postProjects(): Call = {
-   import ReverseRouteContext.empty
-   Call("POST", _prefix + { _defaultPrefix } + "v1/projects")
-}
-                        
-
-// @LINE:67
-def getProject(key:String): Call = {
-   import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "v1/projects/" + implicitly[PathBindable[String]].unbind("key", dynamicString(key)))
-}
-                        
-
-}
-                          
 }
                   
 
@@ -208,6 +208,36 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
    """
       function(file) {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("file", file)})
+      }
+   """
+)
+                        
+
+}
+              
+
+// @LINE:70
+// @LINE:67
+class ReverseKosyncProjects {
+
+
+// @LINE:70
+def postProjects : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.KosyncProjects.postProjects",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "v1/projects"})
+      }
+   """
+)
+                        
+
+// @LINE:67
+def getProject : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.KosyncProjects.getProject",
+   """
+      function(key) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "v1/projects/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("key", encodeURIComponent(key))})
       }
    """
 )
@@ -371,36 +401,6 @@ def getIssueById : JavascriptReverseRoute = JavascriptReverseRoute(
 
 }
               
-
-// @LINE:70
-// @LINE:67
-class ReverseKosyncProject {
-
-
-// @LINE:70
-def postProjects : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.KosyncProject.postProjects",
-   """
-      function() {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "v1/projects"})
-      }
-   """
-)
-                        
-
-// @LINE:67
-def getProject : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.KosyncProject.getProject",
-   """
-      function(key) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "v1/projects/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("key", encodeURIComponent(key))})
-      }
-   """
-)
-                        
-
-}
-              
 }
         
 
@@ -429,6 +429,26 @@ class ReverseAssets {
 // @LINE:9
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
+)
+                      
+
+}
+                          
+
+// @LINE:70
+// @LINE:67
+class ReverseKosyncProjects {
+
+
+// @LINE:70
+def postProjects(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.KosyncProjects.postProjects(), HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncProjects", "postProjects", Seq(), "POST", """put a Project""", _prefix + """v1/projects""")
+)
+                      
+
+// @LINE:67
+def getProject(key:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.KosyncProjects.getProject(key), HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncProjects", "getProject", Seq(classOf[String]), "GET", """GET a project""", _prefix + """v1/projects/$key<[^/]+>""")
 )
                       
 
@@ -532,26 +552,6 @@ class ReverseKosyncIssue {
 // @LINE:59
 def getIssueById(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.KosyncIssue.getIssueById(), HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncIssue", "getIssueById", Seq(), "GET", """get an Issue""", _prefix + """v1/issue""")
-)
-                      
-
-}
-                          
-
-// @LINE:70
-// @LINE:67
-class ReverseKosyncProject {
-
-
-// @LINE:70
-def postProjects(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.KosyncProject.postProjects(), HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncProject", "postProjects", Seq(), "POST", """put a Project""", _prefix + """v1/projects""")
-)
-                      
-
-// @LINE:67
-def getProject(key:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.KosyncProject.getProject(key), HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncProject", "getProject", Seq(classOf[String]), "GET", """GET a project""", _prefix + """v1/projects/$key<[^/]+>""")
 )
                       
 
