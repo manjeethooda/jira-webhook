@@ -17,6 +17,7 @@ import org.joda.time.DateTimeZone;
 import org.mongodb.morphia.annotations.Embedded;
 import org.mongodb.morphia.annotations.NotSaved;
 import org.mongodb.morphia.annotations.PrePersist;
+import models.*;
 //import com.fasterxml.jackson.databind.annotation;
 //import com.fasterxml.jackson.annotation.*;
 
@@ -67,22 +68,15 @@ public class KosyncProject {
 
 	String id = _id.toString();
 	
-	@NotSaved
-	public Project jiraProject;	
+	@Required	
+	public String projectVendor;	
+	
+	@Required
+	public ProjectInfo projectInfo;	
 
 	@Required
-	@Indexed
-	public String jiraProjectKey;
+	public String[] usersId;
 		
-	@Required
-	public String jiraProjectURL;
-
-	@Required
-	public String jiraUsername;
-	
-	@Required
-	public String jiraAuthKey;	
-	
 	public String lastUpdatedAt = new DateTime(DateTimeZone.UTC).toString();
 	public String createdAt = new DateTime(DateTimeZone.UTC).toString();
 
@@ -106,25 +100,16 @@ public class KosyncProject {
 		this._id = new ObjectId(id);
 	}
 
-	public void setJiraProjectKey(String jiraProjectKey) {
-		this.jiraProjectKey = jiraProjectKey;
-	}
-	
-	public void setjiraURL(String jiraProjectURL) {
-		this.jiraProjectURL = jiraProjectURL;
-	}
-	
-	public void setJiraUsername(String jiraUsername) {
-		this.jiraUsername = jiraUsername;
+	public void setProjectVendor(String projectVendor) {
+		this.projectVendor = projectVendor;
 	}
 
-	public void setJiraAuthKey(String jiraAuthKey) {
-		this.jiraAuthKey = jiraAuthKey;
+	public void setProjectInfo(ProjectInfo projectInfo){
+		this.projectInfo = projectInfo;
 	}
-	
-	@JsonSerialize(as = Project.class)
-    	public void setJiraProject(Project jiraProject) {
-		this.jiraProject = jiraProject;
+
+	public void setUsersId(String[] usersId){
+		this.usersId = usersId;
 	}
 	
 	/**
@@ -139,24 +124,15 @@ public class KosyncProject {
 		return this.id;
 	}
 
-	public String getJiraProjectKey(){
-		return this.jiraProjectKey;
+	public String getProjectVendor() {
+		return this.projectVendor;
 	}
 
-	public String getJiraProjectURL(){
-		return this.jiraProjectURL;
+	public ProjectInfo getProjectInfo(){
+		return this.projectInfo;
 	}
 
-	public String getJiraUsername(){
-		return this.jiraUsername;
-	}
-
-	public String getJiraAuthKey(){
-		return this.jiraAuthKey;
-	}
-	
-	@JsonSerialize(as = Project.class)
-    	public Project getJiraProject() {
-		return this.jiraProject;
+	public String[] getUsersId(){
+		return this.usersId;
 	}
 }

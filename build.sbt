@@ -56,6 +56,7 @@ libraryDependencies ++= Seq(
   "org.codehaus.jackson" % "jackson-core-asl" % "1.9.13",
   "com.atlassian.jira" % "jira-rest-java-client-core" % "3.0.0",  
   "com.atlassian.jira" % "jira-rest-java-client-api" % "3.0.0",
+  "com.googlecode.json-simple" % "json-simple" % "1.1",
   javaJdbc,
   javaEbean,
   cache,

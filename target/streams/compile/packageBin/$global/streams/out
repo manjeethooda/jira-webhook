@@ -6,6 +6,8 @@
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$13$$anonfun$apply$13.class[0m
 [0m[[0mdebug[0m] [0m	Routes$$anonfun$Routes$$controllers_Application_index0_invoker$1.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$Routes$$controllers_Application_index0_invoker$1.class[0m
+[0m[[0mdebug[0m] [0m	models/ProjectInfoService$SerializerModule.class[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/ProjectInfoService$SerializerModule.class[0m
 [0m[[0mdebug[0m] [0m	Routes$$anonfun$Routes$$controllers_Users_getUsers5_invoker$1.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$Routes$$controllers_Users_getUsers5_invoker$1.class[0m
 [0m[[0mdebug[0m] [0m	Routes$$anonfun$routes$1$$anonfun$applyOrElse$10.class[0m
@@ -26,6 +28,8 @@
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$9.class[0m
 [0m[[0mdebug[0m] [0m	models/restapi/HTTPStatusCode.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/restapi/HTTPStatusCode.class[0m
+[0m[[0mdebug[0m] [0m	models/ProjectInfoService$DeserializerModifier.class[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/ProjectInfoService$DeserializerModifier.class[0m
 [0m[[0mdebug[0m] [0m	models/restapi/APIForm.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/restapi/APIForm.class[0m
 [0m[[0mdebug[0m] [0m	controllers/ref/ReverseKosyncIssue$$anonfun$getIssueById$1.class[0m
@@ -56,6 +60,8 @@
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/controllers/ref[0m
 [0m[[0mdebug[0m] [0m	models/UserRef.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/UserRef.class[0m
+[0m[[0mdebug[0m] [0m	Routes$$anonfun$Routes$$controllers_KosyncProjects_postProjects12_invoker$1.class[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$Routes$$controllers_KosyncProjects_postProjects12_invoker$1.class[0m
 [0m[[0mdebug[0m] [0m	models/Expense.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/Expense.class[0m
 [0m[[0mdebug[0m] [0m	controllers/routes.class[0m
@@ -108,8 +114,6 @@
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/controllers/javascript/ReverseExpenses.class[0m
 [0m[[0mdebug[0m] [0m	controllers/ref/ReverseUsers$$anonfun$deleteUserById$1.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/controllers/ref/ReverseUsers$$anonfun$deleteUserById$1.class[0m
-[0m[[0mdebug[0m] [0m	controllers/ref/ReverseKosyncProjects$$anonfun$getProject$1.class[0m
-[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/controllers/ref/ReverseKosyncProjects$$anonfun$getProject$1.class[0m
 [0m[[0mdebug[0m] [0m	controllers/ref/ReverseApplication$$anonfun$index$1.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/controllers/ref/ReverseApplication$$anonfun$index$1.class[0m
 [0m[[0mdebug[0m] [0m	controllers/javascript[0m
@@ -126,6 +130,8 @@
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/application.conf[0m
 [0m[[0mdebug[0m] [0m	Routes$$anonfun$routes$1$$anonfun$applyOrElse$4.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$4.class[0m
+[0m[[0mdebug[0m] [0m	models/ProjectInfoService$1.class[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/ProjectInfoService$1.class[0m
 [0m[[0mdebug[0m] [0m	models/MongoDBMorphia.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/MongoDBMorphia.class[0m
 [0m[[0mdebug[0m] [0m	controllers/ReverseKosyncIssue.class[0m
@@ -146,6 +152,8 @@
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$10$$anonfun$apply$10.class[0m
 [0m[[0mdebug[0m] [0m	Routes$$anonfun$Routes$$controllers_Users_getUserByEmail3_invoker$1.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$Routes$$controllers_Users_getUserByEmail3_invoker$1.class[0m
+[0m[[0mdebug[0m] [0m	models/ProjectInfoService.class[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/ProjectInfoService.class[0m
 [0m[[0mdebug[0m] [0m	Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.class[0m
 [0m[[0mdebug[0m] [0m	controllers/ref/ReverseUsers$$anonfun$getUsers$1.class[0m
@@ -208,6 +216,10 @@
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/views/html/main$$anonfun$f$1.class[0m
 [0m[[0mdebug[0m] [0m	models/Group.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/Group.class[0m
+[0m[[0mdebug[0m] [0m	models/ProjectInfo.class[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/ProjectInfo.class[0m
+[0m[[0mdebug[0m] [0m	models/ProjectInfoService$SerializerModifier.class[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/ProjectInfoService$SerializerModifier.class[0m
 [0m[[0mdebug[0m] [0m	services/IssueDAO.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/services/IssueDAO.class[0m
 [0m[[0mdebug[0m] [0m	utils[0m
@@ -226,8 +238,6 @@
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/controllers/ref/ReverseKosyncProjects.class[0m
 [0m[[0mdebug[0m] [0m	Routes$$anonfun$Routes$$controllers_KosyncProjects_postProjects13_invoker$1.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$Routes$$controllers_KosyncProjects_postProjects13_invoker$1.class[0m
-[0m[[0mdebug[0m] [0m	Routes$$anonfun$Routes$$controllers_KosyncProjects_getProject12_invoker$1.class[0m
-[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$Routes$$controllers_KosyncProjects_getProject12_invoker$1.class[0m
 [0m[[0mdebug[0m] [0m	Routes$$anonfun$routes$1$$anonfun$applyOrElse$11.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$11.class[0m
 [0m[[0mdebug[0m] [0m	Routes$$anonfun$routes$1$$anonfun$applyOrElse$12.class[0m
@@ -258,14 +268,20 @@
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/LinkedAccount.class[0m
 [0m[[0mdebug[0m] [0m	Routes$$anonfun$routes$1$$anonfun$applyOrElse$2.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$2.class[0m
+[0m[[0mdebug[0m] [0m	models/ProjectInfoDeserializer.class[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/ProjectInfoDeserializer.class[0m
 [0m[[0mdebug[0m] [0m	models[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models[0m
 [0m[[0mdebug[0m] [0m	models/restapi/HTTPResponse.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/restapi/HTTPResponse.class[0m
 [0m[[0mdebug[0m] [0m	views/html/index$.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/views/html/index$.class[0m
+[0m[[0mdebug[0m] [0m	models/ProjectInfoService$DeserializerModule.class[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/ProjectInfoService$DeserializerModule.class[0m
 [0m[[0mdebug[0m] [0m	controllers/ReverseAssets.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/controllers/ReverseAssets.class[0m
+[0m[[0mdebug[0m] [0m	models/ProjectInfoSerializer.class[0m
+[0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/models/ProjectInfoSerializer.class[0m
 [0m[[0mdebug[0m] [0m	Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.class[0m
 [0m[[0mdebug[0m] [0m	  /home/manjeet/ashu/final/firstTry/apiserver/target/scala-2.11/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.class[0m
 [0m[[0mdebug[0m] [0m	controllers/ref/ReverseExpenses$$anonfun$getExpenseById$1.class[0m

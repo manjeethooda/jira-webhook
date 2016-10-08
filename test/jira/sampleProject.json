@@ -1,0 +1,12 @@
+{ 
+	"projectVendor": "jira", 
+	"ProjectInfo" :  
+	{ 
+		"projectName": "MANJ",
+		"projectURL": "",
+		"authUser": "admin",
+		"authKey": "Webhook@2016"
+	},		
+	"usersIdList": [ ]
+}
+

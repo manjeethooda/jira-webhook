@@ -12,6 +12,10 @@ import models.restapi.MetadataGetCollection;
 import models.restapi.MetadataPostUser;
 import models.restapi.UserDeleteForm;
 import models.restapi.UserGetForm;
+import models.*;
+import play.libs.Json;
+import play.libs.Json.*;    
+import static play.libs.Json.toJson;
 
 import org.apache.commons.lang.exception.ExceptionUtils;
 import org.apache.commons.lang.time.StopWatch;
@@ -37,6 +41,7 @@ import play.Logger;
 import play.libs.ws.*;
 import play.libs.F.Function;
 import play.libs.F.Promise;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import com.atlassian.jira.rest.client.api.JiraRestClient;
 import com.atlassian.jira.rest.client.api.domain.BasicIssue;
@@ -70,7 +75,7 @@ import java.util.Collection;
 
 public class KosyncProjects extends Controller {
 	static ProjectDAO projectDAO = DAOUtils.projectDAO;
-	
+		
 	//post project
 	public static Result postProjects() {
 		// 1. Start stopwatch
@@ -79,31 +84,27 @@ public class KosyncProjects extends Controller {
 
 		// 2. Initialize http response objects
 		HTTPStatus httpStatus = new HTTPStatus();
-		models.KosyncProject kosyncProject = new models.KosyncProject();
 		MetadataPostUser metadata = new MetadataPostUser();
 		String debugInfo = null;
+		models.KosyncProject kosyncProject = new KosyncProject();
 
 		// 3. Calculate response
-		Form<models.KosyncProject> form;
-		try {
+		JsonNode json = request().body().asJson();
+  		try {
 			System.out.println("kuch bhi yahan tak pahunch");
-			form = Form.form(models.KosyncProject.class);
 			System.out.println("printing form");
-			System.out.println(form);
-			if (form.hasErrors()) {
-				throw new Exception("Form has errors");
-			}
-			kosyncProject = form.bindFromRequest().get();
+			System.out.println(json);
+			
+			kosyncProject = deserializeProjectJson(json);
 			if (projectDAO == null) {
 				// if not connected to Users DB
 				httpStatus.setCode(HTTPStatusCode.GONE);
 				httpStatus.setDeveloperMessage("Not connected to Project DB");
 			} else {
-				if (projectDAO.getByJiraProjectKey(kosyncProject.getJiraProject().getKey().toString()) != null 
-				 && projectDAO.getByJiraProjectURL(kosyncProject.getJiraProject().getSelf().toString()) != null) {
+				if (projectDAO.getByProjectInfo(kosyncProject.getProjectInfo()) != null) {
 						metadata.setNewRecord(false);
 						httpStatus.setCode(HTTPStatusCode.BAD_REQUEST);
-						httpStatus.setDeveloperMessage("Project with same URL and key already exists");
+						httpStatus.setDeveloperMessage("Project already exists");
 				} else {
 					System.out.println("written to kosyncProject");
 					projectDAO.save(kosyncProject, WriteConcern.SAFE);
@@ -181,5 +182,28 @@ public class KosyncProjects extends Controller {
 	 */
 	private static boolean isInvalidProjectId(String id) {
 		return id.isEmpty() || id == null;
+	}
+	
+	private static KosyncProject deserializeProjectJson(JsonNode json){
+		String[] JSON_TRAVERSAL_PATH = {"ProjectInfo"};
+		ObjectMapper mapper = new ObjectMapper();		
+		ProjectInfoService projectInfoService = new ProjectInfoService(JSON_TRAVERSAL_PATH);
+		
+		models.KosyncProject kosyncProject = new models.KosyncProject();
+		models.ProjectInfo projectInfo = new models.ProjectInfo();
+		try{
+			String jsonString = mapper.writeValueAsString(json);
+			projectInfo = projectInfoService.deserialize(jsonString);	
+		} catch(Exception e1) {
+		}
+		//String[] usersId = mapper.readValue("usersId", String.class);
+
+		//kosyncProject.setProjectVendor(json.findPath("ProjectVendor").getTextValue());
+		kosyncProject.setProjectInfo(projectInfo);
+		System.out.println("printing deserialised kosync project");
+		System.out.println(kosyncProject);
+		//kosyncProject.setUsersId(usersId);
+		
+		return kosyncProject;				  		
 	}
 }

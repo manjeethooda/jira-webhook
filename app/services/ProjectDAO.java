@@ -1,5 +1,6 @@
 package services;
 
+import models.*;
 import models.KosyncProject;
 
 import org.bson.types.ObjectId;
@@ -30,23 +31,23 @@ public class ProjectDAO extends BasicDAO<KosyncProject, ObjectId> {
 	}
 
 	
-	public KosyncProject getByJiraProjectKey(String jiraProjectKey) {
+	public KosyncProject getByProjectInfo(ProjectInfo projectInfo) {
 	    Datastore db = DAOUtils.projectMongo.datastore;
             Query<KosyncProject> q = db.createQuery(KosyncProject.class);
             q.or(
-                q.criteria("jiraProjectKey").equal(jiraProjectKey)
+                q.criteria("projectName").equal(projectInfo.getProjectName())
             );
             return q.get();
 	}
 	
-	public KosyncProject getByJiraProjectURL(String jiraProjectURL) {
+	/*public KosyncProject getByUser(String jiraProjectURL) {
 	    Datastore db = DAOUtils.projectMongo.datastore;
             Query<KosyncProject> q = db.createQuery(KosyncProject.class);
             q.or(
                 q.criteria("jiraProjectURL").equal(jiraProjectURL)
             );
             return q.get();
-	}
+	}*/
 
 	/*public KosyncProject getByJiraUser(String jiraUser) {
 	    Datastore db = DAOUtils.projectMongo.datastore;

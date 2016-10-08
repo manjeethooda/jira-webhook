@@ -4,7 +4,7 @@
 		module="apiserver_2.11"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20161007133438"
+		publication="20161009003905"
 	>
 		<description>
 		apiserver
@@ -76,6 +76,7 @@
 		<dependency org="stax" name="stax" rev="1.2.0" conf="compile->default(compile)"/>
 		<dependency org="org.codehaus.jackson" name="jackson-core-asl" rev="1.9.13" conf="compile->default(compile)"/>
 		<dependency org="com.atlassian.jira" name="jira-rest-java-client-core" rev="3.0.0" conf="compile->default(compile)"/>
+		<dependency org="com.googlecode.json-simple" name="json-simple" rev="1.1" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-java-jdbc_2.11" rev="2.3.8" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-java-ebean_2.11" rev="2.3.8" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-cache_2.11" rev="2.3.8" conf="compile->default(compile)"/>

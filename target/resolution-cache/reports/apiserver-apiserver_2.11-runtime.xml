@@ -7,10 +7,10 @@
 		revision="0.1.0-SNAPSHOT"
 		conf="runtime"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20161007133438"/>
+		date="20161009003905"/>
 	<dependencies>
 		<module organisation="com.typesafe.play" name="play-java-ebean_2.11">
-			<revision name="2.3.8" status="release" pubdate="20150421202054" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="119">
+			<revision name="2.3.8" status="release" pubdate="20150421202054" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="120">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
 				<metadata-artifact status="no" details="" size="3408" time="0" location="/home/manjeet/.ivy2/cache/com.typesafe.play/play-java-ebean_2.11/ivy-2.3.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-java-ebean_2.11/2.3.8/play-java-ebean_2.11-2.3.8.pom"/>
 				<caller organisation="apiserver" name="apiserver_2.11" conf="compile, runtime" rev="2.3.8" rev-constraint-default="2.3.8" rev-constraint-dynamic="2.3.8" callerrev="0.1.0-SNAPSHOT"/>
@@ -22,7 +22,7 @@
 			</revision>
 		</module>
 		<module organisation="org.hibernate.javax.persistence" name="hibernate-jpa-2.0-api">
-			<revision name="1.0.1.Final" status="release" pubdate="20110615081226" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://hibernate.org" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="122">
+			<revision name="1.0.1.Final" status="release" pubdate="20110615081226" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://hibernate.org" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="123">
 				<license name="Unknown License" url="license.txt"/>
 				<metadata-artifact status="no" details="" size="2465" time="0" location="/home/manjeet/.ivy2/cache/org.hibernate.javax.persistence/hibernate-jpa-2.0-api/ivy-1.0.1.Final.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.pom"/>
 				<caller organisation="com.typesafe.play" name="play-java-ebean_2.11" conf="default, compile, runtime, master" rev="1.0.1.Final" rev-constraint-default="1.0.1.Final" rev-constraint-dynamic="1.0.1.Final" callerrev="2.3.8"/>
@@ -34,9 +34,9 @@
 			</revision>
 		</module>
 		<module organisation="org.avaje.ebeanorm" name="avaje-ebeanorm">
-			<revision name="3.3.4" status="release" pubdate="20140522133431" resolver="public" artresolver="public" homepage="http://www.avaje.org" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="120">
+			<revision name="3.3.4" status="release" pubdate="20140522133431" resolver="public" artresolver="public" homepage="http://www.avaje.org" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="121">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="successful" details="" size="6275" time="1218" location="/home/manjeet/.ivy2/cache/org.avaje.ebeanorm/avaje-ebeanorm/ivy-3.3.4.xml" searched="true" original-local-location="/home/manjeet/.ivy2/cache/org.avaje.ebeanorm/avaje-ebeanorm/ivy-3.3.4.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/avaje/ebeanorm/avaje-ebeanorm/3.3.4/avaje-ebeanorm-3.3.4.pom"/>
+				<metadata-artifact status="successful" details="" size="6275" time="1403" location="/home/manjeet/.ivy2/cache/org.avaje.ebeanorm/avaje-ebeanorm/ivy-3.3.4.xml" searched="true" original-local-location="/home/manjeet/.ivy2/cache/org.avaje.ebeanorm/avaje-ebeanorm/ivy-3.3.4.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/avaje/ebeanorm/avaje-ebeanorm/3.3.4/avaje-ebeanorm-3.3.4.pom"/>
 				<caller organisation="com.typesafe.play" name="play-java-ebean_2.11" conf="default, compile, runtime, master" rev="3.3.4" rev-constraint-default="3.3.4" rev-constraint-dynamic="3.3.4" callerrev="2.3.8"/>
 				<artifacts>
 					<artifact name="avaje-ebeanorm" type="jar" ext="jar" status="no" details="" size="1590523" time="0" location="/home/manjeet/.ivy2/cache/org.avaje.ebeanorm/avaje-ebeanorm/jars/avaje-ebeanorm-3.3.4.jar">
@@ -46,7 +46,7 @@
 			</revision>
 		</module>
 		<module organisation="org.avaje.ebeanorm" name="avaje-ebeanorm-agent">
-			<revision name="3.2.2" status="release" pubdate="20130802053538" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.avaje.org" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="121">
+			<revision name="3.2.2" status="release" pubdate="20130802053538" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.avaje.org" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="122">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="4607" time="0" location="/home/manjeet/.ivy2/cache/org.avaje.ebeanorm/avaje-ebeanorm-agent/ivy-3.2.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/avaje/ebeanorm/avaje-ebeanorm-agent/3.2.2/avaje-ebeanorm-agent-3.2.2.pom"/>
 				<caller organisation="com.typesafe.play" name="play-java-ebean_2.11" conf="default, compile, runtime, master" rev="3.2.2" rev-constraint-default="3.2.2" rev-constraint-dynamic="3.2.2" callerrev="2.3.8"/>
@@ -58,7 +58,7 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-java-jdbc_2.11">
-			<revision name="2.3.8" status="release" pubdate="20150421213823" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master" position="112">
+			<revision name="2.3.8" status="release" pubdate="20150421213823" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master" position="113">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
 				<metadata-artifact status="no" details="" size="2821" time="0" location="/home/manjeet/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/ivy-2.3.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-java-jdbc_2.11/2.3.8/play-java-jdbc_2.11-2.3.8.pom"/>
 				<caller organisation="com.typesafe.play" name="play-java-ebean_2.11" conf="default, compile, runtime, master" rev="2.3.8" rev-constraint-default="2.3.8" rev-constraint-dynamic="2.3.8" callerrev="2.3.8"/>
@@ -71,7 +71,7 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-jdbc_2.11">
-			<revision name="2.3.8" status="release" pubdate="20150421214345" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="113">
+			<revision name="2.3.8" status="release" pubdate="20150421214345" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="114">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
 				<metadata-artifact status="no" details="" size="3763" time="0" location="/home/manjeet/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/ivy-2.3.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/releases/com/typesafe/play/play-jdbc_2.11/2.3.8/play-jdbc_2.11-2.3.8.pom"/>
 				<caller organisation="com.typesafe.play" name="play-java-jdbc_2.11" conf="default, compile, runtime, master" rev="2.3.8" rev-constraint-default="2.3.8" rev-constraint-dynamic="2.3.8" callerrev="2.3.8"/>
@@ -83,7 +83,7 @@
 			</revision>
 		</module>
 		<module organisation="tyrex" name="tyrex">
-			<revision name="1.0.1" status="release" pubdate="20051108172044" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="116">
+			<revision name="1.0.1" status="release" pubdate="20051108172044" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="117">
 				<metadata-artifact status="no" details="" size="2291" time="0" location="/home/manjeet/.ivy2/cache/tyrex/tyrex/ivy-1.0.1.xml" searched="false" origin-is-local="true" origin-location="/home/manjeet/ashu/activator-dist-1.3.10/repository/tyrex/tyrex/1.0.1/ivys/ivy.xml"/>
 				<caller organisation="com.typesafe.play" name="play-jdbc_2.11" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="2.3.8"/>
 				<artifacts>
@@ -94,7 +94,7 @@
 			</revision>
 		</module>
 		<module organisation="com.h2database" name="h2">
-			<revision name="1.3.175" status="release" pubdate="20140118123415" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.h2database.com" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="115">
+			<revision name="1.3.175" status="release" pubdate="20140118123415" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.h2database.com" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="116">
 				<license name="The H2 License, Version 1.0" url="http://h2database.com/html/license.html"/>
 				<metadata-artifact status="no" details="" size="2452" time="0" location="/home/manjeet/.ivy2/cache/com.h2database/h2/ivy-1.3.175.xml" searched="false" origin-is-local="false" origin-location="file:/home/manjeet/ashu/activator-dist-1.3.10/repository/com.h2database/h2/1.3.175/ivys/ivy.xml"/>
 				<caller organisation="com.typesafe.play" name="play-jdbc_2.11" conf="compile, runtime" rev="1.3.175" rev-constraint-default="1.3.175" rev-constraint-dynamic="1.3.175" callerrev="2.3.8"/>
@@ -106,13 +106,25 @@
 			</revision>
 		</module>
 		<module organisation="com.jolbox" name="bonecp">
-			<revision name="0.8.0.RELEASE" status="release" pubdate="20131023074844" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="114">
+			<revision name="0.8.0.RELEASE" status="release" pubdate="20131023074844" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="115">
 				<license name="Apache v2" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
 				<metadata-artifact status="no" details="" size="8107" time="0" location="/home/manjeet/.ivy2/cache/com.jolbox/bonecp/ivy-0.8.0.RELEASE.xml" searched="false" origin-is-local="true" origin-location="/home/manjeet/ashu/activator-dist-1.3.10/repository/com.jolbox/bonecp/0.8.0.RELEASE/ivys/ivy.xml"/>
 				<caller organisation="com.typesafe.play" name="play-jdbc_2.11" conf="compile, runtime" rev="0.8.0.RELEASE" rev-constraint-default="0.8.0.RELEASE" rev-constraint-dynamic="0.8.0.RELEASE" callerrev="2.3.8"/>
 				<artifacts>
 					<artifact name="bonecp" type="bundle" ext="jar" status="no" details="" size="110600" time="0" location="/home/manjeet/ashu/activator-dist-1.3.10/repository/com.jolbox/bonecp/0.8.0.RELEASE/bundles/bonecp.jar">
 						<origin-location is-local="true" location="/home/manjeet/ashu/activator-dist-1.3.10/repository/com.jolbox/bonecp/0.8.0.RELEASE/bundles/bonecp.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.googlecode.json-simple" name="json-simple">
+			<revision name="1.1" status="release" pubdate="20090812213513" resolver="public" artresolver="public" homepage="http://code.google.com/p/json-simple/" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="112">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="successful" details="" size="1085" time="1372" location="/home/manjeet/.ivy2/cache/com.googlecode.json-simple/json-simple/ivy-1.1.xml" searched="true" original-local-location="/home/manjeet/.ivy2/cache/com.googlecode.json-simple/json-simple/ivy-1.1.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/googlecode/json-simple/json-simple/1.1/json-simple-1.1.pom"/>
+				<caller organisation="apiserver" name="apiserver_2.11" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="0.1.0-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="json-simple" type="jar" ext="jar" status="successful" details="" size="16046" time="1626" location="/home/manjeet/.ivy2/cache/com.googlecode.json-simple/json-simple/jars/json-simple-1.1.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/googlecode/json-simple/json-simple/1.1/json-simple-1.1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -240,7 +252,7 @@
 			<revision name="2.2.7" status="release" pubdate="20130423223237" resolver="public" artresolver="public" homepage="http://jaxb.java.net/" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master, master(*), runtime(*), compile(*)" position="97">
 				<license name="CDDL 1.1" url="https://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
 				<license name="GPL2 w/ CPE" url="https://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
-				<metadata-artifact status="successful" details="" size="4710" time="1169" location="/home/manjeet/.ivy2/cache/com.sun.xml.bind/jaxb-impl/ivy-2.2.7.xml" searched="true" original-local-location="/home/manjeet/.ivy2/cache/com.sun.xml.bind/jaxb-impl/ivy-2.2.7.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/sun/xml/bind/jaxb-impl/2.2.7/jaxb-impl-2.2.7.pom"/>
+				<metadata-artifact status="successful" details="" size="4710" time="1491" location="/home/manjeet/.ivy2/cache/com.sun.xml.bind/jaxb-impl/ivy-2.2.7.xml" searched="true" original-local-location="/home/manjeet/.ivy2/cache/com.sun.xml.bind/jaxb-impl/ivy-2.2.7.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/sun/xml/bind/jaxb-impl/2.2.7/jaxb-impl-2.2.7.pom"/>
 				<caller organisation="com.sun.jersey" name="jersey-json" conf="default, compile, runtime, master" rev="2.2.3-1" rev-constraint-default="2.2.3-1" rev-constraint-dynamic="2.2.3-1" callerrev="1.19.1"/>
 				<caller organisation="apiserver" name="apiserver_2.11" conf="compile, runtime" rev="2.2.7" rev-constraint-default="2.2.7" rev-constraint-dynamic="2.2.7" callerrev="0.1.0-SNAPSHOT"/>
 				<artifacts>
@@ -262,7 +274,7 @@
 		</module>
 		<module organisation="com.sun.xml.fastinfoset" name="FastInfoset">
 			<revision name="1.2.12" status="release" pubdate="20110905152838" resolver="public" artresolver="public" homepage="http://fi.java.net" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="101">
-				<metadata-artifact status="successful" details="" size="1430" time="1205" location="/home/manjeet/.ivy2/cache/com.sun.xml.fastinfoset/FastInfoset/ivy-1.2.12.xml" searched="true" original-local-location="/home/manjeet/.ivy2/cache/com.sun.xml.fastinfoset/FastInfoset/ivy-1.2.12.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/sun/xml/fastinfoset/FastInfoset/1.2.12/FastInfoset-1.2.12.pom"/>
+				<metadata-artifact status="successful" details="" size="1430" time="1410" location="/home/manjeet/.ivy2/cache/com.sun.xml.fastinfoset/FastInfoset/ivy-1.2.12.xml" searched="true" original-local-location="/home/manjeet/.ivy2/cache/com.sun.xml.fastinfoset/FastInfoset/ivy-1.2.12.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/sun/xml/fastinfoset/FastInfoset/1.2.12/FastInfoset-1.2.12.pom"/>
 				<caller organisation="com.sun.xml.bind" name="jaxb-impl" conf="default, compile, runtime, master" rev="1.2.12" rev-constraint-default="1.2.12" rev-constraint-dynamic="1.2.12" callerrev="2.2.7"/>
 				<artifacts>
 					<artifact name="FastInfoset" type="jar" ext="jar" status="no" details="" size="293863" time="0" location="/home/manjeet/.ivy2/cache/com.sun.xml.fastinfoset/FastInfoset/jars/FastInfoset-1.2.12.jar">
@@ -286,7 +298,7 @@
 			<revision name="2.2.7" status="release" pubdate="20130423222441" resolver="public" artresolver="public" homepage="http://jaxb.java.net/" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="98">
 				<license name="CDDL 1.1" url="https://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
 				<license name="GPL2 w/ CPE" url="https://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
-				<metadata-artifact status="successful" details="" size="4441" time="1208" location="/home/manjeet/.ivy2/cache/com.sun.xml.bind/jaxb-core/ivy-2.2.7.xml" searched="true" original-local-location="/home/manjeet/.ivy2/cache/com.sun.xml.bind/jaxb-core/ivy-2.2.7.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/sun/xml/bind/jaxb-core/2.2.7/jaxb-core-2.2.7.pom"/>
+				<metadata-artifact status="successful" details="" size="4441" time="1542" location="/home/manjeet/.ivy2/cache/com.sun.xml.bind/jaxb-core/ivy-2.2.7.xml" searched="true" original-local-location="/home/manjeet/.ivy2/cache/com.sun.xml.bind/jaxb-core/ivy-2.2.7.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/sun/xml/bind/jaxb-core/2.2.7/jaxb-core-2.2.7.pom"/>
 				<caller organisation="com.sun.xml.bind" name="jaxb-impl" conf="default, compile, runtime, master" rev="2.2.7" rev-constraint-default="2.2.7" rev-constraint-dynamic="2.2.7" callerrev="2.2.7"/>
 				<artifacts>
 					<artifact name="jaxb-core" type="jar" ext="jar" status="no" details="" size="221747" time="0" location="/home/manjeet/.ivy2/cache/com.sun.xml.bind/jaxb-core/jars/jaxb-core-2.2.7.jar">
@@ -310,7 +322,7 @@
 			<revision name="2.2.7" status="release" pubdate="20120524150721" resolver="public" artresolver="public" homepage="http://jaxb.java.net/" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master, default(compile)" position="99">
 				<license name="CDDL 1.1" url="https://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
 				<license name="GPL2 w/ CPE" url="https://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
-				<metadata-artifact status="successful" details="" size="8101" time="1274" location="/home/manjeet/.ivy2/cache/javax.xml.bind/jaxb-api/ivy-2.2.7.xml" searched="true" original-local-location="/home/manjeet/.ivy2/cache/javax.xml.bind/jaxb-api/ivy-2.2.7.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.2.7/jaxb-api-2.2.7.pom"/>
+				<metadata-artifact status="successful" details="" size="8101" time="1428" location="/home/manjeet/.ivy2/cache/javax.xml.bind/jaxb-api/ivy-2.2.7.xml" searched="true" original-local-location="/home/manjeet/.ivy2/cache/javax.xml.bind/jaxb-api/ivy-2.2.7.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.2.7/jaxb-api-2.2.7.pom"/>
 				<caller organisation="com.sun.xml.bind" name="jaxb-impl" conf="compile, runtime" rev="2.2.2" rev-constraint-default="2.2.2" rev-constraint-dynamic="2.2.2" callerrev="2.2.3-1"/>
 				<caller organisation="com.sun.xml.bind" name="jaxb-core" conf="compile, runtime" rev="2.2.7" rev-constraint-default="2.2.7" rev-constraint-dynamic="2.2.7" callerrev="2.2.7"/>
 				<caller organisation="apiserver" name="apiserver_2.11" conf="compile, runtime" rev="2.2.3" rev-constraint-default="2.2.3" rev-constraint-dynamic="2.2.3" callerrev="0.1.0-SNAPSHOT"/>
@@ -946,7 +958,7 @@
 			</revision>
 		</module>
 		<module organisation="org.javassist" name="javassist">
-			<revision name="3.19.0-GA" status="release" pubdate="20150106220522" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.javassist.org/" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master, master(compile)" position="118">
+			<revision name="3.19.0-GA" status="release" pubdate="20150106220522" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.javassist.org/" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master, master(compile)" position="119">
 				<license name="MPL 1.1" url="http://www.mozilla.org/MPL/MPL-1.1.html"/>
 				<license name="LGPL 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
 				<license name="Apache License 2.0" url="http://www.apache.org/licenses/"/>
@@ -975,7 +987,7 @@
 			</revision>
 		</module>
 		<module organisation="org.jboss.logging" name="jboss-logging">
-			<revision name="3.2.0.Final" status="release" pubdate="20141111065215" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.jboss.org" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master, master(compile)" position="117">
+			<revision name="3.2.0.Final" status="release" pubdate="20141111065215" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.jboss.org" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master, master(compile)" position="118">
 				<license name="Apache License, version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="9336" time="0" location="/home/manjeet/.ivy2/cache/org.jboss.logging/jboss-logging/ivy-3.2.0.Final.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/jboss/logging/jboss-logging/3.2.0.Final/jboss-logging-3.2.0.Final.pom"/>
 				<caller organisation="org.hibernate" name="hibernate-validator" conf="compile, runtime" rev="3.1.1.GA" rev-constraint-default="3.1.1.GA" rev-constraint-dynamic="3.1.1.GA" callerrev="5.0.3.Final"/>
