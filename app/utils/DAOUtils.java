@@ -167,13 +167,13 @@ public final class DAOUtils {
     }
 
     /**
-     * Connects to kosync Issue MongoDB database by reading the configuration file
+     * Connects to Kosync Issue MongoDB database by reading the configuration file
      * 
      * @throws UnknownHostException
      * 
      */
      private static void connectToIssueMongo() {
-     	Logger.info("Trying to connect to kosync Issue DB");
+     	Logger.info("Trying to connect to Kosync Issue DB");
      	try {
      		String host = Play.application().configuration()
      				.getString("issue.mongodb.uri.host");
@@ -182,7 +182,7 @@ public final class DAOUtils {
      		String db = Play.application().configuration()
      				.getString("issue.mongodb.uri.db");
      		issueMongo = new MongoDBMorphia(host, port, db);
-     		issueMongo.morphia.map(kosyncIssue.class);
+     		issueMongo.morphia.map(KosyncIssue.class);
      		issueMongo.datastore.ensureIndexes();
      		issueMongo.datastore.ensureCaps();
      	} catch (Exception e) {
@@ -207,13 +207,13 @@ public final class DAOUtils {
     
    
     /**
-     * Connects to kosync Project MongoDB database by reading the configuration file
+     * Connects to Kosync Project MongoDB database by reading the configuration file
      * 
      * @throws UnknownHostException
      * 
      */
      private static void connectToProjectMongo() {
-     	Logger.info("Trying to connect to kosync Project DB");
+     	Logger.info("Trying to connect to Kosync Project DB");
      	try {
      		String host = Play.application().configuration()
      				.getString("project.mongodb.uri.host");

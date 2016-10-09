@@ -1,6 +1,5 @@
 package services;
 
-import models.*;
 import models.KosyncProject;
 
 import org.bson.types.ObjectId;
@@ -11,7 +10,7 @@ import org.mongodb.morphia.query.Query;
 import utils.DAOUtils;
 
 /**
- * @author sanket
+ * @author mhooda
  *
  */
 public class ProjectDAO extends BasicDAO<KosyncProject, ObjectId> {
@@ -26,29 +25,29 @@ public class ProjectDAO extends BasicDAO<KosyncProject, ObjectId> {
 
 	}
 
-	public KosyncProject get(String id) {
-		return super.get(new ObjectId(id));
+	public KosyncProject get(String _id) {
+		return super.get(new ObjectId(_id));
 	}
 
 	
-	public KosyncProject getByProjectInfo(ProjectInfo projectInfo) {
+	public KosyncProject getByProjectKey(String projectKey) {
 	    Datastore db = DAOUtils.projectMongo.datastore;
             Query<KosyncProject> q = db.createQuery(KosyncProject.class);
             q.or(
-                q.criteria("projectName").equal(projectInfo.getProjectName())
+                q.criteria("projectKey").equal(projectKey)
             );
             return q.get();
 	}
 	
-	/*public KosyncProject getByUser(String jiraProjectURL) {
+	public KosyncProject getByProjectURL(String projectURL) {
 	    Datastore db = DAOUtils.projectMongo.datastore;
             Query<KosyncProject> q = db.createQuery(KosyncProject.class);
             q.or(
-                q.criteria("jiraProjectURL").equal(jiraProjectURL)
+                q.criteria("projectURL").equal(projectURL)
             );
             return q.get();
-	}*/
-
+	}
+	
 	/*public KosyncProject getByJiraUser(String jiraUser) {
 	    Datastore db = DAOUtils.projectMongo.datastore;
             Query<KosyncProject> q = db.createQuery(KosyncProject.class);

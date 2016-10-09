@@ -55,8 +55,20 @@ POST 	/v1/expenses 					controllers.Expenses.postExpenses()
 ##################################################################################
 ## Issue API
 
-#get an Issue
-GET 	/v1/issue					controllers.KosyncIssue.getIssueById()
+#GET an Issue
+GET 	/v1/issues/:id					controllers.KosyncIssues.getIssueById(id: String)
+
+GET 	/v1/issues/key/:key				controllers.KosyncIssues.getIssuesByKey(key: String)
+
+GET 	/v1/issues/parent/:parent 			controllers.KosyncIssues.getIssueByParent(parent: String)
+
+GET 	/v1/issues/child/:child 			controllers.KosyncIssues.getIssueByChild(child: String)
+
+#post into Issues collection
+POST 	/v1/issues					controllers.KosyncIssues.postIssues()
+
+# delete a Issue
+DELETE  /v1/issues/:id 					controllers.KosyncIssues.deleteIssueById(id: String)
 
 ##################################################################################
 
@@ -64,8 +76,15 @@ GET 	/v1/issue					controllers.KosyncIssue.getIssueById()
 ## Project API
 
 #GET a project
-GET 	/v1/projects/				controllers.KosyncProjects.postProjects()
+GET 	/v1/projects/:id				controllers.KosyncProjects.getProjectById(id: String)
 
-#put a Project
+GET 	/v1/projects/key/:key				controllers.KosyncProjects.getProjectsByKey(key: String)
+
+GET 	/v1/projects/URL/:URL 				controllers.KosyncProjects.getProjectByURL(URL: String)
+
+#post into Projects collection
 POST 	/v1/projects					controllers.KosyncProjects.postProjects()
+
+# delete a Project
+DELETE  /v1/projects/:id 				controllers.KosyncProjects.deleteProjectById(id: String)
 

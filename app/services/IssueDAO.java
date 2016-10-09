@@ -1,6 +1,6 @@
 package services;
 
-import models.kosyncIssue;
+import models.KosyncIssue;
 
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.Datastore;
@@ -13,7 +13,7 @@ import utils.DAOUtils;
  * @author sanket
  *
  */
-public class IssueDAO extends BasicDAO<kosyncIssue, ObjectId> {
+public class IssueDAO extends BasicDAO<KosyncIssue, ObjectId> {
 
 	String collectionName = null;
 
@@ -21,29 +21,47 @@ public class IssueDAO extends BasicDAO<kosyncIssue, ObjectId> {
 	 * @param datastore
 	 */
 	public IssueDAO(Datastore datastore) {
-		super(kosyncIssue.class, datastore);
+		super(KosyncIssue.class, datastore);
 
 	}
 
-	public kosyncIssue get(String id) {
+	public KosyncIssue get(String id) {
 		return super.get(new ObjectId(id));
 	}
 
 	
-	public kosyncIssue getByJiraId(String jiraId) {
+	public KosyncIssue getByProjectId(String projectId) {
 	    Datastore db = DAOUtils.issueMongo.datastore;
-            Query<kosyncIssue> q = db.createQuery(kosyncIssue.class);
+            Query<KosyncIssue> q = db.createQuery(KosyncIssue.class);
             q.or(
-                q.criteria("jiraId").equal(jiraId)
+                q.criteria("projectId").equal(projectId)
             );
             return q.get();
 	}
 	
-	public kosyncIssue getByJiraURL(String jiraURL) {
+	public KosyncIssue getByKey(String key) {
 	    Datastore db = DAOUtils.issueMongo.datastore;
-            Query<kosyncIssue> q = db.createQuery(kosyncIssue.class);
+            Query<KosyncIssue> q = db.createQuery(KosyncIssue.class);
             q.or(
-                q.criteria("jiraURL").equal(jiraURL)
+                q.criteria("vendorKey").equal(key)
+            );
+            return q.get();
+	}
+	
+	public KosyncIssue getByParent(String parentIssue) {
+	    Datastore db = DAOUtils.issueMongo.datastore;
+            Query<KosyncIssue> q = db.createQuery(KosyncIssue.class);
+            q.or(
+                q.criteria("parentIssue").equal(parentIssue)
+            );
+            return q.get();
+	}
+	
+	public KosyncIssue getByChild(String childIssue) {
+	    Datastore db = DAOUtils.issueMongo.datastore;
+            Query<KosyncIssue> q = db.createQuery(KosyncIssue.class);
+            q.or(
+                q.criteria("childIssue").equal(childIssue)
             );
             return q.get();
 	}
