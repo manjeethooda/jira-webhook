@@ -227,6 +227,7 @@ public class KosyncIssues extends Controller {
 				httpStatus, metadata, kosyncIssue, debugInfo);
 		return status(httpStatus.code, Json.toJson(httpResponse));
 	}
+	
 
 	public static Result getIssuesByKey(String issueKey) {
 		// 1. Start stopwatch
@@ -240,61 +241,34 @@ public class KosyncIssues extends Controller {
 		String debugInfo = null;
 
 		// 3. Calculate response
-		DBObject dbObjQuery = null;
-		UserGetForm issueGetForm = null;
-		Integer numFound = 0;
-
-		try {
-			Form<UserGetForm> form = Form.form(UserGetForm.class);
-			if(form.hasErrors()) {
-				throw new Exception("Form has errors");
-			}
-			issueGetForm = form.bindFromRequest().get();
-
-			if(issueDAO==null) {
-				// if not connected to KosyncIssues DB
-				httpStatus.setCode(HTTPStatusCode.GONE);
-				httpStatus.setDeveloperMessage("Not connected to KosyncIssue DB");
-			} else {
-			    if(issueGetForm.action != null && issueGetForm.action.equalsIgnoreCase("deleteall")) {
-			        issueDAO.getDatastore().delete(issueDAO.getDatastore().createQuery(KosyncIssue.class).filter("isActive", true));
-                    httpStatus.setCode(HTTPStatusCode.OK);
-                    httpStatus.setDeveloperMessage("KosyncIssues were successfully deleted from DB");
-			    } else
-				if (issueGetForm.q == null || issueGetForm.q == "") {
-					httpStatus.setCode(HTTPStatusCode.BAD_REQUEST);
-					httpStatus.setDeveloperMessage("Request Query invalid. Make sure query is not empty or null.");
-				} else if (issueGetForm.method.equals("basic")) {
-					// do nothing as of now
-				} else if (issueGetForm.method.equals("generic")) {
-					try {
-					    dbObjQuery = (DBObject) JSON.parse(issueGetForm.q);
-						DBObject dbObjSortQuery = (DBObject) JSON.parse(issueGetForm.sort);
-						List<DBObject> issueDBObject = issueDAO.getCollection().find(dbObjQuery).sort(dbObjSortQuery).skip(issueGetForm.start).limit(issueGetForm.rows).toArray();
-						numFound = issueDAO.getCollection().find(dbObjQuery).count();
-						kosyncIssues = new ObjectMapper().readValue(issueDBObject.toString(), new TypeReference<List<KosyncIssue>>() {});
-						httpStatus.setCode(HTTPStatusCode.OK);
-						httpStatus.setDeveloperMessage("Query executed successfully.");
-					} catch (Exception e) {
-						httpStatus.setCode(HTTPStatusCode.NOT_FOUND);
-						httpStatus.setDeveloperMessage("KosyncIssue not found. "
-								+ "Either id is invalid or kosyncIssue doesnot exist in database. "
-								+ "Also check that api is pointed to correct database. "
-								+ "If all seems ok, notify the fucking developers. "
-								+ e.toString());
-						debugInfo = ExceptionUtils.getFullStackTrace(e.fillInStackTrace());
-						e.printStackTrace();
-					}
-				} else {
-					httpStatus.setCode(HTTPStatusCode.BAD_REQUEST);
-					httpStatus.setDeveloperMessage("Request method invalid. Make sure method parameter is passed correctly.");
-				}
-			}
-		} catch (Exception e) {
+		if (isInvalidIssueId(issueKey)) {
 			httpStatus.setCode(HTTPStatusCode.BAD_REQUEST);
-			httpStatus.setDeveloperMessage("Error in submitted query!! Check models.UserGetForm.java file");
-			debugInfo = ExceptionUtils.getFullStackTrace(e.fillInStackTrace());
-			e.printStackTrace();
+			httpStatus
+			.setDeveloperMessage("KosyncIssue Key invalid. Make sure URL is not empty or null. Also check if its a valid URL");
+		} else if (issueDAO == null) {
+			httpStatus.setCode(HTTPStatusCode.GONE);
+			httpStatus.setDeveloperMessage("Not connected to KosyncIssue DB");
+		} else {
+			try {
+				kosyncIssues = issueDAO.getByKey(issueKey);
+				if (kosyncIssues.size() == 0) {
+					httpStatus.setCode(HTTPStatusCode.NOT_FOUND);
+					httpStatus.setDeveloperMessage("KosyncIssue not found in DB");
+				} else {
+					httpStatus.setCode(HTTPStatusCode.OK);
+					httpStatus.setDeveloperMessage("KosyncIssue found in DB");
+				}
+			} catch (Exception e) {
+				httpStatus.setCode(HTTPStatusCode.NOT_FOUND);
+				httpStatus
+						.setDeveloperMessage("KosyncIssues not found. \n"
+								+ "Either id is invalid or kosyncIssue doesnot exist in database. \n"
+								+ "Also check that api is pointed to correct database. \n"
+								+ "If all seems ok, notify the fucking developers.");
+				debugInfo = ExceptionUtils.getFullStackTrace(e
+						.fillInStackTrace());
+				e.printStackTrace();
+			}
 		}
 
 		// 4. Stop stopwatch
@@ -302,13 +276,14 @@ public class KosyncIssues extends Controller {
 
 		// 5. Calculate final HTTP response
 		metadata.setQTime(stopWatch.getTime());
-		metadata.setNumFound(numFound);
+		metadata.setNumFound(kosyncIssues.size());
 		HTTPResponse<List<KosyncIssue>, MetadataGetCollection, String> httpResponse = new HTTPResponse<List<KosyncIssue>, MetadataGetCollection, String>(httpStatus, metadata, kosyncIssues, debugInfo);
 		return status(httpStatus.code, Json.toJson(httpResponse));
 
 	}
+	
 
-	public static Result getIssuesByProjectId(String projectId) {
+	public static Result getIssues() {
 		// 1. Start stopwatch
 		StopWatch stopWatch = new StopWatch();
 		stopWatch.start();
@@ -386,8 +361,7 @@ public class KosyncIssues extends Controller {
 		HTTPResponse<List<KosyncIssue>, MetadataGetCollection, String> httpResponse = new HTTPResponse<List<KosyncIssue>, MetadataGetCollection, String>(httpStatus, metadata, kosyncIssues, debugInfo);
 		return status(httpStatus.code, Json.toJson(httpResponse));
 
-	}
-	
+	}	
 	
 	public static Result deleteIssueById(String id) {
 		// 1. Start stopwatch

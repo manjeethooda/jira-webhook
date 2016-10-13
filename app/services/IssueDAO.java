@@ -1,5 +1,9 @@
 package services;
 
+
+
+import java.util.ArrayList;
+import java.util.List;
 import models.KosyncIssue;
 
 import org.bson.types.ObjectId;
@@ -38,16 +42,6 @@ public class IssueDAO extends BasicDAO<KosyncIssue, ObjectId> {
             );
             return q.get();
 	}
-	
-	public KosyncIssue getByKey(String key) {
-	    Datastore db = DAOUtils.issueMongo.datastore;
-            Query<KosyncIssue> q = db.createQuery(KosyncIssue.class);
-            q.or(
-                q.criteria("vendorKey").equal(key)
-            );
-            return q.get();
-	}
-	
 	public KosyncIssue getByParent(String parentIssue) {
 	    Datastore db = DAOUtils.issueMongo.datastore;
             Query<KosyncIssue> q = db.createQuery(KosyncIssue.class);
@@ -64,5 +58,13 @@ public class IssueDAO extends BasicDAO<KosyncIssue, ObjectId> {
                 q.criteria("childIssue").equal(childIssue)
             );
             return q.get();
+	}
+
+	public List<KosyncIssue> getByKey(String key){
+	    Datastore db = DAOUtils.issueMongo.datastore;
+            List<KosyncIssue> list = db.createQuery(KosyncIssue.class)
+   					.field("vendorKey").equal(key).asList();
+	    //System.out.println(list);	
+	    return list;		
 	}
 }

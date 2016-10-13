@@ -145,8 +145,61 @@ public class KosyncProjects extends Controller {
 				httpStatus, metadata, kosyncProject, debugInfo);
 		return status(httpStatus.code, Json.toJson(httpResponse));
 	}
-
+	
 	public static Result getProjectsByKey(String projectKey) {
+		// 1. Start stopwatch
+		StopWatch stopWatch = new StopWatch();
+		stopWatch.start();
+
+		// 2. Initialize http response objects
+		HTTPStatus httpStatus = new HTTPStatus();
+		MetadataGetCollection metadata = new MetadataGetCollection();
+		List<KosyncProject> kosyncProjects = new ArrayList<KosyncProject>();
+		String debugInfo = null;
+
+		// 3. Calculate response
+		if (isInvalidProjectId(projectKey)) {
+			httpStatus.setCode(HTTPStatusCode.BAD_REQUEST);
+			httpStatus
+			.setDeveloperMessage("KosyncProject Key invalid. Make sure key is not empty or null. Also check if its a valid URL");
+		} else if (projectDAO == null) {
+			httpStatus.setCode(HTTPStatusCode.GONE);
+			httpStatus.setDeveloperMessage("Not connected to KosyncProject DB");
+		} else {
+			try {
+				kosyncProjects = projectDAO.getByKey(projectKey);
+				if (kosyncProjects.size() == 0) {
+					httpStatus.setCode(HTTPStatusCode.NOT_FOUND);
+					httpStatus.setDeveloperMessage("KosyncProject not found in DB");
+				} else {
+					httpStatus.setCode(HTTPStatusCode.OK);
+					httpStatus.setDeveloperMessage("KosyncProject found in DB");
+				}
+			} catch (Exception e) {
+				httpStatus.setCode(HTTPStatusCode.NOT_FOUND);
+				httpStatus
+						.setDeveloperMessage("KosyncProject not found. \n"
+								+ "Either id is invalid or kosyncProject doesnot exist in database. \n"
+								+ "Also check that api is pointed to correct database. \n"
+								+ "If all seems ok, notify the fucking developers.");
+				debugInfo = ExceptionUtils.getFullStackTrace(e
+						.fillInStackTrace());
+				e.printStackTrace();
+			}
+		}
+
+		// 4. Stop stopwatch
+		stopWatch.stop();
+
+		// 5. Calculate final HTTP response
+		metadata.setQTime(stopWatch.getTime());
+		metadata.setNumFound(kosyncProjects.size());
+		HTTPResponse<List<KosyncProject>, MetadataGetCollection, String> httpResponse = new HTTPResponse<List<KosyncProject>, MetadataGetCollection, String>(httpStatus, metadata, kosyncProjects, debugInfo);
+		return status(httpStatus.code, Json.toJson(httpResponse));
+
+	}
+	
+	public static Result getProjects() {
 		// 1. Start stopwatch
 		StopWatch stopWatch = new StopWatch();
 		stopWatch.start();

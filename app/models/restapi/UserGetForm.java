@@ -7,7 +7,7 @@ public class UserGetForm {
 	
 	public String method = "generic";
 	
-	public String q = "{isActive:true}";
+	public String q = "{projectVendor:\"jira\"}";
 	
 	public Integer start = 0;
 	

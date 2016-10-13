@@ -1,5 +1,9 @@
 package services;
 
+
+import java.util.ArrayList;
+import java.util.List;
+
 import models.KosyncProject;
 
 import org.bson.types.ObjectId;
@@ -47,7 +51,15 @@ public class ProjectDAO extends BasicDAO<KosyncProject, ObjectId> {
             );
             return q.get();
 	}
-	
+
+
+	public List<KosyncProject> getByKey(String key){
+	    Datastore db = DAOUtils.projectMongo.datastore;
+            List<KosyncProject> list = db.createQuery(KosyncProject.class)
+   					.field("projectKey").equal(key).asList();
+//	    System.out.println(list);	
+	    return list;		
+	}	
 	/*public KosyncProject getByJiraUser(String jiraUser) {
 	    Datastore db = DAOUtils.projectMongo.datastore;
             Query<KosyncProject> q = db.createQuery(KosyncProject.class);
