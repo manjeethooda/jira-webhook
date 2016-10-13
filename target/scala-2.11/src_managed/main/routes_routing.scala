@@ -1,6 +1,6 @@
-// @SOURCE:/home/manjeet/ashu/final/firstTry/apiserver/conf/routes
-// @HASH:de7b0e5c36ea58dd27d09a9916032d8eb4c56411
-// @DATE:Sun Oct 09 10:17:54 IST 2016
+// @SOURCE:/home/manjeet/ashu/latest/jira-webhook/conf/routes
+// @HASH:372ffbc33ab252833e5b228dfec7247e1f3382ee
+// @DATE:Thu Oct 13 22:07:47 IST 2016
 
 
 import play.core._
@@ -118,10 +118,10 @@ HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncIssues", "getIss
         
 
 // @LINE:61
-private[this] lazy val controllers_KosyncIssues_getIssuesByKey12_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("v1/issues/key/"),DynamicPart("key", """[^/]+""",true))))
-private[this] lazy val controllers_KosyncIssues_getIssuesByKey12_invoker = createInvoker(
-controllers.KosyncIssues.getIssuesByKey(fakeValue[String]),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncIssues", "getIssuesByKey", Seq(classOf[String]),"GET", """""", Routes.prefix + """v1/issues/key/$key<[^/]+>"""))
+private[this] lazy val controllers_KosyncIssues_getIssues12_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("v1/issues"))))
+private[this] lazy val controllers_KosyncIssues_getIssues12_invoker = createInvoker(
+controllers.KosyncIssues.getIssues(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncIssues", "getIssues", Nil,"GET", """""", Routes.prefix + """v1/issues"""))
         
 
 // @LINE:63
@@ -138,55 +138,69 @@ controllers.KosyncIssues.getIssueByChild(fakeValue[String]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncIssues", "getIssueByChild", Seq(classOf[String]),"GET", """""", Routes.prefix + """v1/issues/child/$child<[^/]+>"""))
         
 
-// @LINE:68
-private[this] lazy val controllers_KosyncIssues_postIssues15_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("v1/issues"))))
-private[this] lazy val controllers_KosyncIssues_postIssues15_invoker = createInvoker(
+// @LINE:67
+private[this] lazy val controllers_KosyncIssues_getIssuesByKey15_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("v1/issues/key/"),DynamicPart("key", """[^/]+""",true))))
+private[this] lazy val controllers_KosyncIssues_getIssuesByKey15_invoker = createInvoker(
+controllers.KosyncIssues.getIssuesByKey(fakeValue[String]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncIssues", "getIssuesByKey", Seq(classOf[String]),"GET", """""", Routes.prefix + """v1/issues/key/$key<[^/]+>"""))
+        
+
+// @LINE:70
+private[this] lazy val controllers_KosyncIssues_postIssues16_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("v1/issues"))))
+private[this] lazy val controllers_KosyncIssues_postIssues16_invoker = createInvoker(
 controllers.KosyncIssues.postIssues(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncIssues", "postIssues", Nil,"POST", """post into Issues collection""", Routes.prefix + """v1/issues"""))
         
 
-// @LINE:71
-private[this] lazy val controllers_KosyncIssues_deleteIssueById16_route = Route("DELETE", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("v1/issues/"),DynamicPart("id", """[^/]+""",true))))
-private[this] lazy val controllers_KosyncIssues_deleteIssueById16_invoker = createInvoker(
+// @LINE:73
+private[this] lazy val controllers_KosyncIssues_deleteIssueById17_route = Route("DELETE", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("v1/issues/"),DynamicPart("id", """[^/]+""",true))))
+private[this] lazy val controllers_KosyncIssues_deleteIssueById17_invoker = createInvoker(
 controllers.KosyncIssues.deleteIssueById(fakeValue[String]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncIssues", "deleteIssueById", Seq(classOf[String]),"DELETE", """ delete a Issue""", Routes.prefix + """v1/issues/$id<[^/]+>"""))
         
 
-// @LINE:79
-private[this] lazy val controllers_KosyncProjects_getProjectById17_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("v1/projects/"),DynamicPart("id", """[^/]+""",true))))
-private[this] lazy val controllers_KosyncProjects_getProjectById17_invoker = createInvoker(
+// @LINE:81
+private[this] lazy val controllers_KosyncProjects_getProjectById18_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("v1/projects/"),DynamicPart("id", """[^/]+""",true))))
+private[this] lazy val controllers_KosyncProjects_getProjectById18_invoker = createInvoker(
 controllers.KosyncProjects.getProjectById(fakeValue[String]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncProjects", "getProjectById", Seq(classOf[String]),"GET", """GET a project""", Routes.prefix + """v1/projects/$id<[^/]+>"""))
         
 
-// @LINE:81
-private[this] lazy val controllers_KosyncProjects_getProjectsByKey18_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("v1/projects/key/"),DynamicPart("key", """[^/]+""",true))))
-private[this] lazy val controllers_KosyncProjects_getProjectsByKey18_invoker = createInvoker(
-controllers.KosyncProjects.getProjectsByKey(fakeValue[String]),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncProjects", "getProjectsByKey", Seq(classOf[String]),"GET", """""", Routes.prefix + """v1/projects/key/$key<[^/]+>"""))
+// @LINE:83
+private[this] lazy val controllers_KosyncProjects_getProjects19_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("v1/projects"))))
+private[this] lazy val controllers_KosyncProjects_getProjects19_invoker = createInvoker(
+controllers.KosyncProjects.getProjects(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncProjects", "getProjects", Nil,"GET", """""", Routes.prefix + """v1/projects"""))
         
 
-// @LINE:83
-private[this] lazy val controllers_KosyncProjects_getProjectByURL19_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("v1/projects/URL/"),DynamicPart("URL", """[^/]+""",true))))
-private[this] lazy val controllers_KosyncProjects_getProjectByURL19_invoker = createInvoker(
+// @LINE:85
+private[this] lazy val controllers_KosyncProjects_getProjectByURL20_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("v1/projects/URL/"),DynamicPart("URL", """[^/]+""",true))))
+private[this] lazy val controllers_KosyncProjects_getProjectByURL20_invoker = createInvoker(
 controllers.KosyncProjects.getProjectByURL(fakeValue[String]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncProjects", "getProjectByURL", Seq(classOf[String]),"GET", """""", Routes.prefix + """v1/projects/URL/$URL<[^/]+>"""))
         
 
-// @LINE:86
-private[this] lazy val controllers_KosyncProjects_postProjects20_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("v1/projects"))))
-private[this] lazy val controllers_KosyncProjects_postProjects20_invoker = createInvoker(
+// @LINE:87
+private[this] lazy val controllers_KosyncProjects_getProjectsByKey21_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("v1/projects/key/"),DynamicPart("key", """[^/]+""",true))))
+private[this] lazy val controllers_KosyncProjects_getProjectsByKey21_invoker = createInvoker(
+controllers.KosyncProjects.getProjectsByKey(fakeValue[String]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncProjects", "getProjectsByKey", Seq(classOf[String]),"GET", """""", Routes.prefix + """v1/projects/key/$key<[^/]+>"""))
+        
+
+// @LINE:89
+private[this] lazy val controllers_KosyncProjects_postProjects22_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("v1/projects"))))
+private[this] lazy val controllers_KosyncProjects_postProjects22_invoker = createInvoker(
 controllers.KosyncProjects.postProjects(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncProjects", "postProjects", Nil,"POST", """post into Projects collection""", Routes.prefix + """v1/projects"""))
         
 
-// @LINE:89
-private[this] lazy val controllers_KosyncProjects_deleteProjectById21_route = Route("DELETE", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("v1/projects/"),DynamicPart("id", """[^/]+""",true))))
-private[this] lazy val controllers_KosyncProjects_deleteProjectById21_invoker = createInvoker(
+// @LINE:92
+private[this] lazy val controllers_KosyncProjects_deleteProjectById23_route = Route("DELETE", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("v1/projects/"),DynamicPart("id", """[^/]+""",true))))
+private[this] lazy val controllers_KosyncProjects_deleteProjectById23_invoker = createInvoker(
 controllers.KosyncProjects.deleteProjectById(fakeValue[String]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncProjects", "deleteProjectById", Seq(classOf[String]),"DELETE", """ delete a Project""", Routes.prefix + """v1/projects/$id<[^/]+>"""))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/users/$id<[^/]+>""","""controllers.Users.getUserById(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/users/email/$email<[^/]+>""","""controllers.Users.getUserByEmail(email:String)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/users/$id<[^/]+>""","""controllers.Users.deleteUserById(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/users""","""controllers.Users.getUsers()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/users""","""controllers.Users.postUsers()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/users""","""controllers.Users.putUsers()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/expenses/$id<[^/]+>""","""controllers.Expenses.getExpenseById(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/expenses""","""controllers.Expenses.getExpenses()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/expenses""","""controllers.Expenses.postExpenses()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/issues/$id<[^/]+>""","""controllers.KosyncIssues.getIssueById(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/issues/key/$key<[^/]+>""","""controllers.KosyncIssues.getIssuesByKey(key:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/issues/parent/$parent<[^/]+>""","""controllers.KosyncIssues.getIssueByParent(parent:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/issues/child/$child<[^/]+>""","""controllers.KosyncIssues.getIssueByChild(child:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/issues""","""controllers.KosyncIssues.postIssues()"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/issues/$id<[^/]+>""","""controllers.KosyncIssues.deleteIssueById(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/projects/$id<[^/]+>""","""controllers.KosyncProjects.getProjectById(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/projects/key/$key<[^/]+>""","""controllers.KosyncProjects.getProjectsByKey(key:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/projects/URL/$URL<[^/]+>""","""controllers.KosyncProjects.getProjectByURL(URL:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/projects""","""controllers.KosyncProjects.postProjects()"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/projects/$id<[^/]+>""","""controllers.KosyncProjects.deleteProjectById(id:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/users/$id<[^/]+>""","""controllers.Users.getUserById(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/users/email/$email<[^/]+>""","""controllers.Users.getUserByEmail(email:String)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/users/$id<[^/]+>""","""controllers.Users.deleteUserById(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/users""","""controllers.Users.getUsers()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/users""","""controllers.Users.postUsers()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/users""","""controllers.Users.putUsers()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/expenses/$id<[^/]+>""","""controllers.Expenses.getExpenseById(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/expenses""","""controllers.Expenses.getExpenses()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/expenses""","""controllers.Expenses.postExpenses()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/issues/$id<[^/]+>""","""controllers.KosyncIssues.getIssueById(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/issues""","""controllers.KosyncIssues.getIssues()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/issues/parent/$parent<[^/]+>""","""controllers.KosyncIssues.getIssueByParent(parent:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/issues/child/$child<[^/]+>""","""controllers.KosyncIssues.getIssueByChild(child:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/issues/key/$key<[^/]+>""","""controllers.KosyncIssues.getIssuesByKey(key:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/issues""","""controllers.KosyncIssues.postIssues()"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/issues/$id<[^/]+>""","""controllers.KosyncIssues.deleteIssueById(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/projects/$id<[^/]+>""","""controllers.KosyncProjects.getProjectById(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/projects""","""controllers.KosyncProjects.getProjects()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/projects/URL/$URL<[^/]+>""","""controllers.KosyncProjects.getProjectByURL(URL:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/projects/key/$key<[^/]+>""","""controllers.KosyncProjects.getProjectsByKey(key:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/projects""","""controllers.KosyncProjects.postProjects()"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """v1/projects/$id<[^/]+>""","""controllers.KosyncProjects.deleteProjectById(id:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -291,9 +305,9 @@ case controllers_KosyncIssues_getIssueById11_route(params) => {
         
 
 // @LINE:61
-case controllers_KosyncIssues_getIssuesByKey12_route(params) => {
-   call(params.fromPath[String]("key", None)) { (key) =>
-        controllers_KosyncIssues_getIssuesByKey12_invoker.call(controllers.KosyncIssues.getIssuesByKey(key))
+case controllers_KosyncIssues_getIssues12_route(params) => {
+   call { 
+        controllers_KosyncIssues_getIssues12_invoker.call(controllers.KosyncIssues.getIssues())
    }
 }
         
@@ -314,58 +328,74 @@ case controllers_KosyncIssues_getIssueByChild14_route(params) => {
 }
         
 
-// @LINE:68
-case controllers_KosyncIssues_postIssues15_route(params) => {
+// @LINE:67
+case controllers_KosyncIssues_getIssuesByKey15_route(params) => {
+   call(params.fromPath[String]("key", None)) { (key) =>
+        controllers_KosyncIssues_getIssuesByKey15_invoker.call(controllers.KosyncIssues.getIssuesByKey(key))
+   }
+}
+        
+
+// @LINE:70
+case controllers_KosyncIssues_postIssues16_route(params) => {
    call { 
-        controllers_KosyncIssues_postIssues15_invoker.call(controllers.KosyncIssues.postIssues())
+        controllers_KosyncIssues_postIssues16_invoker.call(controllers.KosyncIssues.postIssues())
    }
 }
         
 
-// @LINE:71
-case controllers_KosyncIssues_deleteIssueById16_route(params) => {
+// @LINE:73
+case controllers_KosyncIssues_deleteIssueById17_route(params) => {
    call(params.fromPath[String]("id", None)) { (id) =>
-        controllers_KosyncIssues_deleteIssueById16_invoker.call(controllers.KosyncIssues.deleteIssueById(id))
-   }
-}
-        
-
-// @LINE:79
-case controllers_KosyncProjects_getProjectById17_route(params) => {
-   call(params.fromPath[String]("id", None)) { (id) =>
-        controllers_KosyncProjects_getProjectById17_invoker.call(controllers.KosyncProjects.getProjectById(id))
+        controllers_KosyncIssues_deleteIssueById17_invoker.call(controllers.KosyncIssues.deleteIssueById(id))
    }
 }
         
 
 // @LINE:81
-case controllers_KosyncProjects_getProjectsByKey18_route(params) => {
-   call(params.fromPath[String]("key", None)) { (key) =>
-        controllers_KosyncProjects_getProjectsByKey18_invoker.call(controllers.KosyncProjects.getProjectsByKey(key))
+case controllers_KosyncProjects_getProjectById18_route(params) => {
+   call(params.fromPath[String]("id", None)) { (id) =>
+        controllers_KosyncProjects_getProjectById18_invoker.call(controllers.KosyncProjects.getProjectById(id))
    }
 }
         
 
 // @LINE:83
-case controllers_KosyncProjects_getProjectByURL19_route(params) => {
-   call(params.fromPath[String]("URL", None)) { (URL) =>
-        controllers_KosyncProjects_getProjectByURL19_invoker.call(controllers.KosyncProjects.getProjectByURL(URL))
+case controllers_KosyncProjects_getProjects19_route(params) => {
+   call { 
+        controllers_KosyncProjects_getProjects19_invoker.call(controllers.KosyncProjects.getProjects())
    }
 }
         
 
-// @LINE:86
-case controllers_KosyncProjects_postProjects20_route(params) => {
-   call { 
-        controllers_KosyncProjects_postProjects20_invoker.call(controllers.KosyncProjects.postProjects())
+// @LINE:85
+case controllers_KosyncProjects_getProjectByURL20_route(params) => {
+   call(params.fromPath[String]("URL", None)) { (URL) =>
+        controllers_KosyncProjects_getProjectByURL20_invoker.call(controllers.KosyncProjects.getProjectByURL(URL))
+   }
+}
+        
+
+// @LINE:87
+case controllers_KosyncProjects_getProjectsByKey21_route(params) => {
+   call(params.fromPath[String]("key", None)) { (key) =>
+        controllers_KosyncProjects_getProjectsByKey21_invoker.call(controllers.KosyncProjects.getProjectsByKey(key))
    }
 }
         
 
 // @LINE:89
-case controllers_KosyncProjects_deleteProjectById21_route(params) => {
+case controllers_KosyncProjects_postProjects22_route(params) => {
+   call { 
+        controllers_KosyncProjects_postProjects22_invoker.call(controllers.KosyncProjects.postProjects())
+   }
+}
+        
+
+// @LINE:92
+case controllers_KosyncProjects_deleteProjectById23_route(params) => {
    call(params.fromPath[String]("id", None)) { (id) =>
-        controllers_KosyncProjects_deleteProjectById21_invoker.call(controllers.KosyncProjects.deleteProjectById(id))
+        controllers_KosyncProjects_deleteProjectById23_invoker.call(controllers.KosyncProjects.deleteProjectById(id))
    }
 }
         

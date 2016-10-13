@@ -1,6 +1,6 @@
-// @SOURCE:/home/manjeet/ashu/final/firstTry/apiserver/conf/routes
-// @HASH:de7b0e5c36ea58dd27d09a9916032d8eb4c56411
-// @DATE:Sun Oct 09 10:17:54 IST 2016
+// @SOURCE:/home/manjeet/ashu/latest/jira-webhook/conf/routes
+// @HASH:372ffbc33ab252833e5b228dfec7247e1f3382ee
+// @DATE:Thu Oct 13 22:07:47 IST 2016
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -14,13 +14,15 @@ import _root_.controllers.Assets.Asset
 import Router.queryString
 
 
+// @LINE:92
 // @LINE:89
-// @LINE:86
+// @LINE:87
+// @LINE:85
 // @LINE:83
 // @LINE:81
-// @LINE:79
-// @LINE:71
-// @LINE:68
+// @LINE:73
+// @LINE:70
+// @LINE:67
 // @LINE:65
 // @LINE:63
 // @LINE:61
@@ -38,8 +40,9 @@ import Router.queryString
 // @LINE:6
 package controllers {
 
-// @LINE:71
-// @LINE:68
+// @LINE:73
+// @LINE:70
+// @LINE:67
 // @LINE:65
 // @LINE:63
 // @LINE:61
@@ -54,10 +57,17 @@ def getIssueById(id:String): Call = {
 }
                         
 
-// @LINE:71
+// @LINE:73
 def deleteIssueById(id:String): Call = {
    import ReverseRouteContext.empty
    Call("DELETE", _prefix + { _defaultPrefix } + "v1/issues/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)))
+}
+                        
+
+// @LINE:61
+def getIssues(): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "v1/issues")
 }
                         
 
@@ -68,7 +78,7 @@ def getIssueByChild(child:String): Call = {
 }
                         
 
-// @LINE:68
+// @LINE:70
 def postIssues(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "v1/issues")
@@ -82,7 +92,7 @@ def getIssueByParent(parent:String): Call = {
 }
                         
 
-// @LINE:61
+// @LINE:67
 def getIssuesByKey(key:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "v1/issues/key/" + implicitly[PathBindable[String]].unbind("key", dynamicString(key)))
@@ -106,29 +116,30 @@ def at(file:String): Call = {
 }
                           
 
+// @LINE:92
 // @LINE:89
-// @LINE:86
+// @LINE:87
+// @LINE:85
 // @LINE:83
 // @LINE:81
-// @LINE:79
 class ReverseKosyncProjects {
 
 
-// @LINE:86
+// @LINE:89
 def postProjects(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "v1/projects")
 }
                         
 
-// @LINE:89
+// @LINE:92
 def deleteProjectById(id:String): Call = {
    import ReverseRouteContext.empty
    Call("DELETE", _prefix + { _defaultPrefix } + "v1/projects/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)))
 }
                         
 
-// @LINE:81
+// @LINE:87
 def getProjectsByKey(key:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "v1/projects/key/" + implicitly[PathBindable[String]].unbind("key", dynamicString(key)))
@@ -136,13 +147,20 @@ def getProjectsByKey(key:String): Call = {
                         
 
 // @LINE:83
+def getProjects(): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "v1/projects")
+}
+                        
+
+// @LINE:85
 def getProjectByURL(URL:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "v1/projects/URL/" + implicitly[PathBindable[String]].unbind("URL", dynamicString(URL)))
 }
                         
 
-// @LINE:79
+// @LINE:81
 def getProjectById(id:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "v1/projects/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)))
@@ -253,13 +271,15 @@ def index(): Call = {
                   
 
 
+// @LINE:92
 // @LINE:89
-// @LINE:86
+// @LINE:87
+// @LINE:85
 // @LINE:83
 // @LINE:81
-// @LINE:79
-// @LINE:71
-// @LINE:68
+// @LINE:73
+// @LINE:70
+// @LINE:67
 // @LINE:65
 // @LINE:63
 // @LINE:61
@@ -278,8 +298,9 @@ def index(): Call = {
 package controllers.javascript {
 import ReverseRouteContext.empty
 
-// @LINE:71
-// @LINE:68
+// @LINE:73
+// @LINE:70
+// @LINE:67
 // @LINE:65
 // @LINE:63
 // @LINE:61
@@ -298,12 +319,23 @@ def getIssueById : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:71
+// @LINE:73
 def deleteIssueById : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.KosyncIssues.deleteIssueById",
    """
       function(id) {
       return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "v1/issues/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("id", encodeURIComponent(id))})
+      }
+   """
+)
+                        
+
+// @LINE:61
+def getIssues : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.KosyncIssues.getIssues",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "v1/issues"})
       }
    """
 )
@@ -320,7 +352,7 @@ def getIssueByChild : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:68
+// @LINE:70
 def postIssues : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.KosyncIssues.postIssues",
    """
@@ -342,7 +374,7 @@ def getIssueByParent : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:61
+// @LINE:67
 def getIssuesByKey : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.KosyncIssues.getIssuesByKey",
    """
@@ -374,15 +406,16 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:92
 // @LINE:89
-// @LINE:86
+// @LINE:87
+// @LINE:85
 // @LINE:83
 // @LINE:81
-// @LINE:79
 class ReverseKosyncProjects {
 
 
-// @LINE:86
+// @LINE:89
 def postProjects : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.KosyncProjects.postProjects",
    """
@@ -393,7 +426,7 @@ def postProjects : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:89
+// @LINE:92
 def deleteProjectById : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.KosyncProjects.deleteProjectById",
    """
@@ -404,7 +437,7 @@ def deleteProjectById : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:81
+// @LINE:87
 def getProjectsByKey : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.KosyncProjects.getProjectsByKey",
    """
@@ -416,6 +449,17 @@ def getProjectsByKey : JavascriptReverseRoute = JavascriptReverseRoute(
                         
 
 // @LINE:83
+def getProjects : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.KosyncProjects.getProjects",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "v1/projects"})
+      }
+   """
+)
+                        
+
+// @LINE:85
 def getProjectByURL : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.KosyncProjects.getProjectByURL",
    """
@@ -426,7 +470,7 @@ def getProjectByURL : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:79
+// @LINE:81
 def getProjectById : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.KosyncProjects.getProjectById",
    """
@@ -581,13 +625,15 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
+// @LINE:92
 // @LINE:89
-// @LINE:86
+// @LINE:87
+// @LINE:85
 // @LINE:83
 // @LINE:81
-// @LINE:79
-// @LINE:71
-// @LINE:68
+// @LINE:73
+// @LINE:70
+// @LINE:67
 // @LINE:65
 // @LINE:63
 // @LINE:61
@@ -606,8 +652,9 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 package controllers.ref {
 
 
-// @LINE:71
-// @LINE:68
+// @LINE:73
+// @LINE:70
+// @LINE:67
 // @LINE:65
 // @LINE:63
 // @LINE:61
@@ -621,9 +668,15 @@ def getIssueById(id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.Handl
 )
                       
 
-// @LINE:71
+// @LINE:73
 def deleteIssueById(id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.KosyncIssues.deleteIssueById(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncIssues", "deleteIssueById", Seq(classOf[String]), "DELETE", """ delete a Issue""", _prefix + """v1/issues/$id<[^/]+>""")
+)
+                      
+
+// @LINE:61
+def getIssues(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.KosyncIssues.getIssues(), HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncIssues", "getIssues", Seq(), "GET", """""", _prefix + """v1/issues""")
 )
                       
 
@@ -633,7 +686,7 @@ def getIssueByChild(child:String): play.api.mvc.HandlerRef[_] = new play.api.mvc
 )
                       
 
-// @LINE:68
+// @LINE:70
 def postIssues(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.KosyncIssues.postIssues(), HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncIssues", "postIssues", Seq(), "POST", """post into Issues collection""", _prefix + """v1/issues""")
 )
@@ -645,7 +698,7 @@ def getIssueByParent(parent:String): play.api.mvc.HandlerRef[_] = new play.api.m
 )
                       
 
-// @LINE:61
+// @LINE:67
 def getIssuesByKey(key:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.KosyncIssues.getIssuesByKey(key), HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncIssues", "getIssuesByKey", Seq(classOf[String]), "GET", """""", _prefix + """v1/issues/key/$key<[^/]+>""")
 )
@@ -667,39 +720,46 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
+// @LINE:92
 // @LINE:89
-// @LINE:86
+// @LINE:87
+// @LINE:85
 // @LINE:83
 // @LINE:81
-// @LINE:79
 class ReverseKosyncProjects {
 
 
-// @LINE:86
+// @LINE:89
 def postProjects(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.KosyncProjects.postProjects(), HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncProjects", "postProjects", Seq(), "POST", """post into Projects collection""", _prefix + """v1/projects""")
 )
                       
 
-// @LINE:89
+// @LINE:92
 def deleteProjectById(id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.KosyncProjects.deleteProjectById(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncProjects", "deleteProjectById", Seq(classOf[String]), "DELETE", """ delete a Project""", _prefix + """v1/projects/$id<[^/]+>""")
 )
                       
 
-// @LINE:81
+// @LINE:87
 def getProjectsByKey(key:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.KosyncProjects.getProjectsByKey(key), HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncProjects", "getProjectsByKey", Seq(classOf[String]), "GET", """""", _prefix + """v1/projects/key/$key<[^/]+>""")
 )
                       
 
 // @LINE:83
+def getProjects(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.KosyncProjects.getProjects(), HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncProjects", "getProjects", Seq(), "GET", """""", _prefix + """v1/projects""")
+)
+                      
+
+// @LINE:85
 def getProjectByURL(URL:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.KosyncProjects.getProjectByURL(URL), HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncProjects", "getProjectByURL", Seq(classOf[String]), "GET", """""", _prefix + """v1/projects/URL/$URL<[^/]+>""")
 )
                       
 
-// @LINE:79
+// @LINE:81
 def getProjectById(id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.KosyncProjects.getProjectById(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.KosyncProjects", "getProjectById", Seq(classOf[String]), "GET", """GET a project""", _prefix + """v1/projects/$id<[^/]+>""")
 )

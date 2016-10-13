@@ -7,7 +7,7 @@ public class UserGetForm {
 	
 	public String method = "generic";
 	
-	public String q = "{projectVendor:\"jira\"}";
+	public String q = "{}";
 	
 	public Integer start = 0;
 	

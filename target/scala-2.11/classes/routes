@@ -58,11 +58,13 @@ POST 	/v1/expenses 					controllers.Expenses.postExpenses()
 #GET an Issue
 GET 	/v1/issues/:id					controllers.KosyncIssues.getIssueById(id: String)
 
-GET 	/v1/issues/key/:key				controllers.KosyncIssues.getIssuesByKey(key: String)
+GET 	/v1/issues   					controllers.KosyncIssues.getIssues()
 
 GET 	/v1/issues/parent/:parent 			controllers.KosyncIssues.getIssueByParent(parent: String)
 
 GET 	/v1/issues/child/:child 			controllers.KosyncIssues.getIssueByChild(child: String)
+
+GET 	/v1/issues/key/:key 				controllers.KosyncIssues.getIssuesByKey(key: String)
 
 #post into Issues collection
 POST 	/v1/issues					controllers.KosyncIssues.postIssues()
@@ -78,10 +80,11 @@ DELETE  /v1/issues/:id 					controllers.KosyncIssues.deleteIssueById(id: String)
 #GET a project
 GET 	/v1/projects/:id				controllers.KosyncProjects.getProjectById(id: String)
 
-GET 	/v1/projects/key/:key				controllers.KosyncProjects.getProjectsByKey(key: String)
+GET 	/v1/projects					controllers.KosyncProjects.getProjects()
 
 GET 	/v1/projects/URL/:URL 				controllers.KosyncProjects.getProjectByURL(URL: String)
 
+GET 	/v1/projects/key/:key 				controllers.KosyncProjects.getProjectsByKey(key: String)
 #post into Projects collection
 POST 	/v1/projects					controllers.KosyncProjects.postProjects()
 

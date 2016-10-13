@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mUpdating {file:/home/manjeet/ashu/final/firstTry/apiserver/}root...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/home/manjeet/ashu/latest/jira-webhook/}root...[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: apiserver#apiserver_2.11;0.1.0-SNAPSHOT[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for apiserver#apiserver_2.11;0.1.0-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies apiserver#apiserver_2.11;0.1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.1 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5f304234[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@33b5dd41[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.1[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.11.1[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.1 in sbt-chain[0m
@@ -683,7 +683,7 @@
 [0m[[0mdebug[0m] [0m		tried /home/manjeet/.ivy2/local/com.feth/play-authenticate_2.11/0.6.5-SNAPSHOT/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	local: no ivy file found for com.feth#play-authenticate_2.11;0.6.5-SNAPSHOT[0m
 [0m[[0mdebug[0m] [0mdon't use cache for com.feth#play-authenticate_2.11;0.6.5-SNAPSHOT: changing=true[0m
-[0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/final/firstTry/apiserver/repository/com.feth/play-authenticate_2.11/0.6.5-SNAPSHOT/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/latest/jira-webhook/repository/com.feth/play-authenticate_2.11/0.6.5-SNAPSHOT/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	activator-launcher-local: no ivy file found for com.feth#play-authenticate_2.11;0.6.5-SNAPSHOT[0m
 [0m[[0mdebug[0m] [0mdon't use cache for com.feth#play-authenticate_2.11;0.6.5-SNAPSHOT: changing=true[0m
 [0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/activator-dist-1.3.10/repository/com.feth/play-authenticate_2.11/0.6.5-SNAPSHOT/ivys/ivy.xml[0m
@@ -856,7 +856,7 @@
 [0m[[0mdebug[0m] [0m		tried /home/manjeet/.ivy2/local/com.feth/play-easymail_2.11/0.6.4-SNAPSHOT/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	local: no ivy file found for com.feth#play-easymail_2.11;0.6.4-SNAPSHOT[0m
 [0m[[0mdebug[0m] [0mdon't use cache for com.feth#play-easymail_2.11;0.6.4-SNAPSHOT: changing=true[0m
-[0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/final/firstTry/apiserver/repository/com.feth/play-easymail_2.11/0.6.4-SNAPSHOT/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/latest/jira-webhook/repository/com.feth/play-easymail_2.11/0.6.4-SNAPSHOT/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	activator-launcher-local: no ivy file found for com.feth#play-easymail_2.11;0.6.4-SNAPSHOT[0m
 [0m[[0mdebug[0m] [0mdon't use cache for com.feth#play-easymail_2.11;0.6.4-SNAPSHOT: changing=true[0m
 [0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/activator-dist-1.3.10/repository/com.feth/play-easymail_2.11/0.6.4-SNAPSHOT/ivys/ivy.xml[0m
@@ -1376,7 +1376,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies apiserver#apiserver_2.11;0.1.0-SNAPSHOT->com.atlassian.event#atlassian-event;3.1.3 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies apiserver#apiserver_2.11;0.1.0-SNAPSHOT->com.atlassian.jira#jira-rest-java-client-api;3.0.0 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.atlassian.jira#jira-rest-java-client-api;3.0.0 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5ef339d1[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@782f7590[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.atlassian.jira#jira-rest-java-client-api;3.0.0[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: com.atlassian.jira#jira-rest-java-client-api;3.0.0[0m
 [0m[[0mdebug[0m] [0m	found com.atlassian.jira#jira-rest-java-client-api;3.0.0 in sbt-chain[0m
@@ -1804,7 +1804,7 @@
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.sun.xml.bind#jaxb-impl;2.2.7 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m		tried /home/manjeet/.ivy2/local/com.sun.xml.bind/jaxb-impl/2.2.7/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	local: no ivy file found for com.sun.xml.bind#jaxb-impl;2.2.7[0m
-[0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/final/firstTry/apiserver/repository/com.sun.xml.bind/jaxb-impl/2.2.7/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/latest/jira-webhook/repository/com.sun.xml.bind/jaxb-impl/2.2.7/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	activator-launcher-local: no ivy file found for com.sun.xml.bind#jaxb-impl;2.2.7[0m
 [0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/activator-dist-1.3.10/repository/com.sun.xml.bind/jaxb-impl/2.2.7/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	activator-local: no ivy file found for com.sun.xml.bind#jaxb-impl;2.2.7[0m
@@ -1815,7 +1815,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/sun/xml/bind/jaxb-impl/2.2.7/jaxb-impl-2.2.7.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/sun/xml/bind/jaxb-impl/2.2.7/jaxb-impl-2.2.7.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/sun/xml/bind/jaxb-impl/2.2.7/jaxb-impl-2.2.7.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.sun.xml.bind#jaxb-impl;2.2.7!jaxb-impl.pom(pom.original) (889ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.sun.xml.bind#jaxb-impl;2.2.7!jaxb-impl.pom(pom.original) (1098ms)[0m
 [0m[[0minfo[0m] [0mResolving net.java#jvnet-parent;1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: net.java#jvnet-parent;1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: net.java#jvnet-parent;1[0m
@@ -1828,7 +1828,7 @@
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.sun.xml.bind#jaxb-core;2.2.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0m		tried /home/manjeet/.ivy2/local/com.sun.xml.bind/jaxb-core/2.2.7/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	local: no ivy file found for com.sun.xml.bind#jaxb-core;2.2.7[0m
-[0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/final/firstTry/apiserver/repository/com.sun.xml.bind/jaxb-core/2.2.7/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/latest/jira-webhook/repository/com.sun.xml.bind/jaxb-core/2.2.7/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	activator-launcher-local: no ivy file found for com.sun.xml.bind#jaxb-core;2.2.7[0m
 [0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/activator-dist-1.3.10/repository/com.sun.xml.bind/jaxb-core/2.2.7/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	activator-local: no ivy file found for com.sun.xml.bind#jaxb-core;2.2.7[0m
@@ -1839,7 +1839,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/sun/xml/bind/jaxb-core/2.2.7/jaxb-core-2.2.7.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/sun/xml/bind/jaxb-core/2.2.7/jaxb-core-2.2.7.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/sun/xml/bind/jaxb-core/2.2.7/jaxb-core-2.2.7.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.sun.xml.bind#jaxb-core;2.2.7!jaxb-core.pom(pom.original) (887ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.sun.xml.bind#jaxb-core;2.2.7!jaxb-core.pom(pom.original) (1066ms)[0m
 [0m[[0minfo[0m] [0mResolving net.java#jvnet-parent;1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: net.java#jvnet-parent;1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: net.java#jvnet-parent;1[0m
@@ -1851,7 +1851,7 @@
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: javax.xml.bind#jaxb-api;2.2.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0m		tried /home/manjeet/.ivy2/local/javax.xml.bind/jaxb-api/2.2.7/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	local: no ivy file found for javax.xml.bind#jaxb-api;2.2.7[0m
-[0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/final/firstTry/apiserver/repository/javax.xml.bind/jaxb-api/2.2.7/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/latest/jira-webhook/repository/javax.xml.bind/jaxb-api/2.2.7/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	activator-launcher-local: no ivy file found for javax.xml.bind#jaxb-api;2.2.7[0m
 [0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/activator-dist-1.3.10/repository/javax.xml.bind/jaxb-api/2.2.7/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	activator-local: no ivy file found for javax.xml.bind#jaxb-api;2.2.7[0m
@@ -1862,7 +1862,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.2.7/jaxb-api-2.2.7.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.2.7/jaxb-api-2.2.7.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.2.7/jaxb-api-2.2.7.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] javax.xml.bind#jaxb-api;2.2.7!jaxb-api.pom(pom.original) (1221ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] javax.xml.bind#jaxb-api;2.2.7!jaxb-api.pom(pom.original) (1113ms)[0m
 [0m[[0minfo[0m] [0mResolving net.java#jvnet-parent;1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: net.java#jvnet-parent;1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: net.java#jvnet-parent;1[0m
@@ -1893,7 +1893,7 @@
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.sun.xml.fastinfoset#FastInfoset;1.2.12 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0m		tried /home/manjeet/.ivy2/local/com.sun.xml.fastinfoset/FastInfoset/1.2.12/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	local: no ivy file found for com.sun.xml.fastinfoset#FastInfoset;1.2.12[0m
-[0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/final/firstTry/apiserver/repository/com.sun.xml.fastinfoset/FastInfoset/1.2.12/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/latest/jira-webhook/repository/com.sun.xml.fastinfoset/FastInfoset/1.2.12/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	activator-launcher-local: no ivy file found for com.sun.xml.fastinfoset#FastInfoset;1.2.12[0m
 [0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/activator-dist-1.3.10/repository/com.sun.xml.fastinfoset/FastInfoset/1.2.12/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	activator-local: no ivy file found for com.sun.xml.fastinfoset#FastInfoset;1.2.12[0m
@@ -1904,12 +1904,12 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/sun/xml/fastinfoset/FastInfoset/1.2.12/FastInfoset-1.2.12.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/sun/xml/fastinfoset/FastInfoset/1.2.12/FastInfoset-1.2.12.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/sun/xml/fastinfoset/FastInfoset/1.2.12/FastInfoset-1.2.12.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.sun.xml.fastinfoset#FastInfoset;1.2.12!FastInfoset.pom(pom.original) (1177ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.sun.xml.fastinfoset#FastInfoset;1.2.12!FastInfoset.pom(pom.original) (1096ms)[0m
 [0m[[0minfo[0m] [0mResolving com.sun.xml.fastinfoset#fastinfoset-project;1.2.12 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.sun.xml.fastinfoset#fastinfoset-project;1.2.12 {}[0m
 [0m[[0mdebug[0m] [0m		tried /home/manjeet/.ivy2/local/com.sun.xml.fastinfoset/fastinfoset-project/1.2.12/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	local: no ivy file found for com.sun.xml.fastinfoset#fastinfoset-project;1.2.12[0m
-[0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/final/firstTry/apiserver/repository/com.sun.xml.fastinfoset/fastinfoset-project/1.2.12/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/latest/jira-webhook/repository/com.sun.xml.fastinfoset/fastinfoset-project/1.2.12/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	activator-launcher-local: no ivy file found for com.sun.xml.fastinfoset#fastinfoset-project;1.2.12[0m
 [0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/activator-dist-1.3.10/repository/com.sun.xml.fastinfoset/fastinfoset-project/1.2.12/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	activator-local: no ivy file found for com.sun.xml.fastinfoset#fastinfoset-project;1.2.12[0m
@@ -1920,13 +1920,13 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/sun/xml/fastinfoset/fastinfoset-project/1.2.12/fastinfoset-project-1.2.12.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/sun/xml/fastinfoset/fastinfoset-project/1.2.12/fastinfoset-project-1.2.12.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/sun/xml/fastinfoset/fastinfoset-project/1.2.12/fastinfoset-project-1.2.12.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.sun.xml.fastinfoset#fastinfoset-project;1.2.12!fastinfoset-project.pom(pom.original) (1047ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.sun.xml.fastinfoset#fastinfoset-project;1.2.12!fastinfoset-project.pom(pom.original) (1129ms)[0m
 [0m[[0minfo[0m] [0mResolving net.java#jvnet-parent;1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: net.java#jvnet-parent;1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: net.java#jvnet-parent;1[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: net.java#jvnet-parent;1[0m
 [0m[[0mdebug[0m] [0m		tried /home/manjeet/.ivy2/local/com.sun.xml.fastinfoset/fastinfoset-project/1.2.12/jars/fastinfoset-project.jar[0m
-[0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/final/firstTry/apiserver/repository/com.sun.xml.fastinfoset/fastinfoset-project/1.2.12/jars/fastinfoset-project.jar[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/latest/jira-webhook/repository/com.sun.xml.fastinfoset/fastinfoset-project/1.2.12/jars/fastinfoset-project.jar[0m
 [0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/activator-dist-1.3.10/repository/com.sun.xml.fastinfoset/fastinfoset-project/1.2.12/jars/fastinfoset-project.jar[0m
 [0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/com/sun/xml/fastinfoset/fastinfoset-project/1.2.12/fastinfoset-project-1.2.12.jar[0m
 [0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo1.maven.org/maven2/com/sun/xml/fastinfoset/fastinfoset-project/1.2.12/fastinfoset-project-1.2.12.jar[0m
@@ -2660,7 +2660,7 @@
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.avaje.ebeanorm#avaje-ebeanorm;3.3.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0m		tried /home/manjeet/.ivy2/local/org.avaje.ebeanorm/avaje-ebeanorm/3.3.4/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	local: no ivy file found for org.avaje.ebeanorm#avaje-ebeanorm;3.3.4[0m
-[0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/final/firstTry/apiserver/repository/org.avaje.ebeanorm/avaje-ebeanorm/3.3.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/latest/jira-webhook/repository/org.avaje.ebeanorm/avaje-ebeanorm/3.3.4/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	activator-launcher-local: no ivy file found for org.avaje.ebeanorm#avaje-ebeanorm;3.3.4[0m
 [0m[[0mdebug[0m] [0m		tried file:/home/manjeet/ashu/activator-dist-1.3.10/repository/org.avaje.ebeanorm/avaje-ebeanorm/3.3.4/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	activator-local: no ivy file found for org.avaje.ebeanorm#avaje-ebeanorm;3.3.4[0m
@@ -2671,7 +2671,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/avaje/ebeanorm/avaje-ebeanorm/3.3.4/avaje-ebeanorm-3.3.4.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/avaje/ebeanorm/avaje-ebeanorm/3.3.4/avaje-ebeanorm-3.3.4.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/avaje/ebeanorm/avaje-ebeanorm/3.3.4/avaje-ebeanorm-3.3.4.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.avaje.ebeanorm#avaje-ebeanorm;3.3.4!avaje-ebeanorm.pom(pom.original) (945ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.avaje.ebeanorm#avaje-ebeanorm;3.3.4!avaje-ebeanorm.pom(pom.original) (1068ms)[0m
 [0m[[0minfo[0m] [0mResolving org.avaje#avaje-javaparent;1.2 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.avaje#avaje-javaparent;1.2 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.avaje#avaje-javaparent;1.2[0m
@@ -15165,19 +15165,19 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.1!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.2!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.11!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 57324ms :: artifacts dl 440ms[0m
-[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT compile produced in /home/manjeet/ashu/final/firstTry/apiserver/target/resolution-cache/reports/apiserver-apiserver_2.11-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT runtime produced in /home/manjeet/ashu/final/firstTry/apiserver/target/resolution-cache/reports/apiserver-apiserver_2.11-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT test produced in /home/manjeet/ashu/final/firstTry/apiserver/target/resolution-cache/reports/apiserver-apiserver_2.11-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT provided produced in /home/manjeet/ashu/final/firstTry/apiserver/target/resolution-cache/reports/apiserver-apiserver_2.11-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT optional produced in /home/manjeet/ashu/final/firstTry/apiserver/target/resolution-cache/reports/apiserver-apiserver_2.11-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT compile-internal produced in /home/manjeet/ashu/final/firstTry/apiserver/target/resolution-cache/reports/apiserver-apiserver_2.11-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT runtime-internal produced in /home/manjeet/ashu/final/firstTry/apiserver/target/resolution-cache/reports/apiserver-apiserver_2.11-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT test-internal produced in /home/manjeet/ashu/final/firstTry/apiserver/target/resolution-cache/reports/apiserver-apiserver_2.11-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT plugin produced in /home/manjeet/ashu/final/firstTry/apiserver/target/resolution-cache/reports/apiserver-apiserver_2.11-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT sources produced in /home/manjeet/ashu/final/firstTry/apiserver/target/resolution-cache/reports/apiserver-apiserver_2.11-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT docs produced in /home/manjeet/ashu/final/firstTry/apiserver/target/resolution-cache/reports/apiserver-apiserver_2.11-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT pom produced in /home/manjeet/ashu/final/firstTry/apiserver/target/resolution-cache/reports/apiserver-apiserver_2.11-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT scala-tool produced in /home/manjeet/ashu/final/firstTry/apiserver/target/resolution-cache/reports/apiserver-apiserver_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (57324ms resolve - 440ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 58339ms :: artifacts dl 116ms[0m
+[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT compile produced in /home/manjeet/ashu/latest/jira-webhook/target/resolution-cache/reports/apiserver-apiserver_2.11-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT runtime produced in /home/manjeet/ashu/latest/jira-webhook/target/resolution-cache/reports/apiserver-apiserver_2.11-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT test produced in /home/manjeet/ashu/latest/jira-webhook/target/resolution-cache/reports/apiserver-apiserver_2.11-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT provided produced in /home/manjeet/ashu/latest/jira-webhook/target/resolution-cache/reports/apiserver-apiserver_2.11-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT optional produced in /home/manjeet/ashu/latest/jira-webhook/target/resolution-cache/reports/apiserver-apiserver_2.11-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT compile-internal produced in /home/manjeet/ashu/latest/jira-webhook/target/resolution-cache/reports/apiserver-apiserver_2.11-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT runtime-internal produced in /home/manjeet/ashu/latest/jira-webhook/target/resolution-cache/reports/apiserver-apiserver_2.11-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT test-internal produced in /home/manjeet/ashu/latest/jira-webhook/target/resolution-cache/reports/apiserver-apiserver_2.11-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT plugin produced in /home/manjeet/ashu/latest/jira-webhook/target/resolution-cache/reports/apiserver-apiserver_2.11-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT sources produced in /home/manjeet/ashu/latest/jira-webhook/target/resolution-cache/reports/apiserver-apiserver_2.11-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT docs produced in /home/manjeet/ashu/latest/jira-webhook/target/resolution-cache/reports/apiserver-apiserver_2.11-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT pom produced in /home/manjeet/ashu/latest/jira-webhook/target/resolution-cache/reports/apiserver-apiserver_2.11-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for apiserver#apiserver_2.11;0.1.0-SNAPSHOT scala-tool produced in /home/manjeet/ashu/latest/jira-webhook/target/resolution-cache/reports/apiserver-apiserver_2.11-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (58339ms resolve - 116ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
