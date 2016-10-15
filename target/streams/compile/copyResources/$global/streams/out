@@ -1,5 +1,0 @@
-[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
-[0m[[0mdebug[0m] [0m	(/home/manjeet/ashu/latest/jira-webhook/conf/routes,/home/manjeet/ashu/latest/jira-webhook/target/scala-2.11/classes/routes)[0m
-[0m[[0mdebug[0m] [0m	(/home/manjeet/ashu/latest/jira-webhook/conf/application-context.xml,/home/manjeet/ashu/latest/jira-webhook/target/scala-2.11/classes/application-context.xml)[0m
-[0m[[0mdebug[0m] [0m	(/home/manjeet/ashu/latest/jira-webhook/conf/application.conf,/home/manjeet/ashu/latest/jira-webhook/target/scala-2.11/classes/application.conf)[0m
-[0m[[0mdebug[0m] [0m	(/home/manjeet/ashu/latest/jira-webhook/conf/application-logger.xml,/home/manjeet/ashu/latest/jira-webhook/target/scala-2.11/classes/application-logger.xml)[0m
