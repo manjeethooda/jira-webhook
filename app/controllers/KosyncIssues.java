@@ -444,9 +444,8 @@ public class KosyncIssues extends Controller {
 				httpStatus.setDeveloperMessage("Not connected to Issue DB");
 			} else {
 				try {
-                    if (issueDAO.getByParent(kosyncIssue.getParentIssue()) != null  ||
-			issueDAO.getByProjectId(kosyncIssue.getProjectId()) != null &&
-			issueDAO.getByKey(kosyncIssue.getVendorKey()) != null  ){
+                    //if (issueDAO.getByParent(kosyncIssue.getParentIssue()) != null  ||
+		     if(issueDAO.getByProjectIdAndKey(kosyncIssue.getProjectId(), kosyncIssue.getVendorKey()) != null){
                         metadata.setNewRecord(false);
                         httpStatus.setCode(HTTPStatusCode.BAD_REQUEST);
                         httpStatus.setDeveloperMessage("Issue already exists");

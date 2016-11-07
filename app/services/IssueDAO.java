@@ -60,6 +60,16 @@ public class IssueDAO extends BasicDAO<KosyncIssue, ObjectId> {
             return q.get();
 	}
 
+	public KosyncIssue getByProjectIdAndKey(String projectId, String key) {
+	    Datastore db = DAOUtils.issueMongo.datastore;
+            Query<KosyncIssue> q = db.createQuery(KosyncIssue.class);
+	    q.and(
+  		q.criteria("projectId").equal(projectId),
+    		q.criteria("vendorKey").equal(key)
+	    );
+	    return q.get();
+	}
+
 	public List<KosyncIssue> getByKey(String key){
 	    Datastore db = DAOUtils.issueMongo.datastore;
             List<KosyncIssue> list = db.createQuery(KosyncIssue.class)
